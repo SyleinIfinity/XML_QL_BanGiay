@@ -1,0 +1,50 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="_x0027_NhanVien_x0027_" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="_x0027_NhanVien_x0027_">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="manhanvien" type="xs:string" minOccurs="0" />
+                <xs:element name="hoten" type="xs:string" minOccurs="0" />
+                <xs:element name="diachi" type="xs:string" minOccurs="0" />
+                <xs:element name="sdt" type="xs:string" minOccurs="0" />
+                <xs:element name="email" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <_x0027_NhanVien_x0027_>
+    <manhanvien>NV001</manhanvien>
+    <hoten>Cường Cao</hoten>
+    <diachi>123 Đường ABC, Quận 1, TP.HCM</diachi>
+    <sdt>0912345678</sdt>
+    <email>a.nguyen@example.com</email>
+  </_x0027_NhanVien_x0027_>
+  <_x0027_NhanVien_x0027_>
+    <manhanvien>NV002</manhanvien>
+    <hoten>Vũ không ngủuu</hoten>
+    <diachi>456 Đường DEF, Quận 2, TP.HCM</diachi>
+    <sdt>0923456789</sdt>
+    <email>b.phan@example.com</email>
+  </_x0027_NhanVien_x0027_>
+  <_x0027_NhanVien_x0027_>
+    <manhanvien>NV003</manhanvien>
+    <hoten>Hải da vàng</hoten>
+    <diachi>789 Đường GHI, Quận 3, TP.HCM</diachi>
+    <sdt>0934567890</sdt>
+    <email>c.hoang@example.com</email>
+  </_x0027_NhanVien_x0027_>
+  <_x0027_NhanVien_x0027_>
+    <manhanvien>NVtesst</manhanvien>
+    <hoten>test</hoten>
+    <diachi>0</diachi>
+    <sdt>0         </sdt>
+    <email>test@gmail.com</email>
+  </_x0027_NhanVien_x0027_>
+</NewDataSet>

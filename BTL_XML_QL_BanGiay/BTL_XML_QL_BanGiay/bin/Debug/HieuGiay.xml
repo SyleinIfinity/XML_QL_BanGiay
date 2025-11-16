@@ -1,0 +1,31 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="_x0027_HieuGiay_x0027_" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="_x0027_HieuGiay_x0027_">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="mahieugiay" type="xs:string" minOccurs="0" />
+                <xs:element name="tenhieugiay" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <_x0027_HieuGiay_x0027_>
+    <mahieugiay>HG001</mahieugiay>
+    <tenhieugiay>Hệ thống Giày X</tenhieugiay>
+  </_x0027_HieuGiay_x0027_>
+  <_x0027_HieuGiay_x0027_>
+    <mahieugiay>HG002</mahieugiay>
+    <tenhieugiay>Nike</tenhieugiay>
+  </_x0027_HieuGiay_x0027_>
+  <_x0027_HieuGiay_x0027_>
+    <mahieugiay>HG003</mahieugiay>
+    <tenhieugiay>Hệ thống Giày Z</tenhieugiay>
+  </_x0027_HieuGiay_x0027_>
+</NewDataSet>

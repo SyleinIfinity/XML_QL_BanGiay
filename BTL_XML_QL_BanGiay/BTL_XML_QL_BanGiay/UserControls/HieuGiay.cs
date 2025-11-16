@@ -1,0 +1,155 @@
+﻿using BTL_XML_QL_BanGiay.Models;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace BTL_XML_QL_BanGiay.UserControls
+{
+    public partial class HieuGiay : UserControl
+    {
+        Connect cnn = new Connect();
+        HieuGiayModel hdM = new HieuGiayModel();
+
+        public HieuGiay()
+        {
+            InitializeComponent();
+            loadHieuGiay();
+            dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
+            txtField_timKiem.TextChanged += txtField_timKiem_TextChanged;
+        }
+
+        private void loadHieuGiay()
+        {
+            try
+            {
+                DataTable dt = cnn.showTable("HieuGiay.xml");
+
+                if (dt == null || dt.Rows.Count == 0)
+                {
+                    MessageBox.Show("Chưa có dữ liệu hiệu giày. Vui lòng thêm dữ liệu.");
+                    return;
+                }
+
+                dataGridView1.DataSource = dt;
+                dataGridView1.Columns["mahieugiay"].HeaderText = "Mã hiệu giày";
+                dataGridView1.Columns["tenhieugiay"].HeaderText = "Tên hiệu giày";
+
+                dataGridView1.Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi tải dữ liệu: " + ex.Message);
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+                txtField_maHieuGiay.Text = row.Cells["mahieugiay"].Value.ToString();
+                txtField_tenHieuGiay.Text = row.Cells["tenhieugiay"].Value.ToString();
+            }
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+
+                txtField_maHieuGiay.Text = selectedRow.Cells["mahieugiay"]?.Value?.ToString() ?? string.Empty;
+                txtField_tenHieuGiay.Text = selectedRow.Cells["tenhieugiay"]?.Value?.ToString() ?? string.Empty;
+            }
+        }
+
+        private void txtField_timKiem_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                DataTable dt = cnn.showTable("HieuGiay.xml");
+                if (dt == null || dt.Rows.Count == 0) return;
+
+                string searchValue = txtField_timKiem.Text.Trim().ToLower();
+                DataView dv = dt.DefaultView;
+                if (!string.IsNullOrEmpty(searchValue))
+                {
+                    dv.RowFilter = $"mahieugiay LIKE '%{searchValue}%'";
+                }
+                else
+                {
+                    dv.RowFilter = string.Empty;
+                }
+
+                dataGridView1.DataSource = dv;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi tìm kiếm: " + ex.Message);
+            }
+        }
+
+        private void btn_sua_Click(object sender, EventArgs e)
+        {
+            string shoeBrandCode = txtField_maHieuGiay.Text.Trim();
+            string shoeBrandName = txtField_tenHieuGiay.Text.Trim();
+
+            if (!hdM.checkShoeBrandCode(shoeBrandCode))
+            {
+                MessageBox.Show("Không tìm thấy hiệu giày để sửa.");
+                return;
+            }
+
+            hdM.updateShoeBrand(shoeBrandCode, shoeBrandName);
+            loadHieuGiay();
+            MessageBox.Show("Cập nhật hiệu giày thành công!!");
+        }
+
+        private void btn_xoa_Click(object sender, EventArgs e)
+        {
+            string shoeBrandCode = txtField_maHieuGiay.Text.Trim();
+
+            if (!hdM.checkShoeBrandCode(shoeBrandCode))
+            {
+                MessageBox.Show("Không tìm thấy tài khoản để xóa.");
+                return;
+            }
+
+            hdM.deleteShoeBrand(shoeBrandCode);
+            loadHieuGiay();
+
+            MessageBox.Show("Xóa danh mục thành công!");
+        }
+
+        private void btn_them_Click(object sender, EventArgs e)
+        {
+            string shoeBrandCode = txtField_maHieuGiay.Text.Trim();
+            string shoeBrandName = txtField_tenHieuGiay.Text.Trim();
+
+            if (string.IsNullOrEmpty(shoeBrandCode) || string.IsNullOrEmpty(shoeBrandName))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ mã hiệu giày và tên hiệu giày.");
+                return;
+            }
+
+            if (hdM.checkShoeBrandCode(shoeBrandCode))
+            {
+                MessageBox.Show("Mã hiệu giày này đã tồn tại.");
+                return;
+            }
+
+            hdM.createShoeBrand(shoeBrandCode, shoeBrandName);
+
+            loadHieuGiay();
+
+            MessageBox.Show("Thêm hiệu giày thành công!");
+        }
+    }
+ }
+
