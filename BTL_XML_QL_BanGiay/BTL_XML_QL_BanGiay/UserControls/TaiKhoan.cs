@@ -18,6 +18,11 @@ namespace BTL_XML_QL_BanGiay.Forms
             loadMaNhanVien();
             dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
             txtField_timKiem.TextChanged += txtField_timKiem_TextChanged;
+            txtField_matKhau.Width = 138;
+            txtField_timKiem.Width = 210;
+            rdbtn_chuCuaHang.Width = 210;
+            rdbtn_nhanVien.Width = 200;
+
         }
 
         private void loadTaiKhoan()
