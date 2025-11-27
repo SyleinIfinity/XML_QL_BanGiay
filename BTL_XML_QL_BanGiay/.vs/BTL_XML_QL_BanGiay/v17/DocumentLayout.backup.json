@@ -104,15 +104,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TrangChu.cs [Design]",
-              "DocumentMoniker": "F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay\\Forms\\TrangChu.cs",
-              "RelativeDocumentMoniker": "BTL_XML_QL_BanGiay\\Forms\\TrangChu.cs",
-              "ToolTip": "F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay\\Forms\\TrangChu.cs [Design]",
-              "RelativeToolTip": "BTL_XML_QL_BanGiay\\Forms\\TrangChu.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "DanhMuc.cs [Design]",
+              "DocumentMoniker": "D:\\CNTT-SPKT\\CNTT-SPKT\\qlibangiay\\BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay\\UserControls\\DanhMuc.cs",
+              "RelativeDocumentMoniker": "BTL_XML_QL_BanGiay\\UserControls\\DanhMuc.cs",
+              "ToolTip": "D:\\CNTT-SPKT\\CNTT-SPKT\\qlibangiay\\BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay\\UserControls\\DanhMuc.cs [Design]",
+              "RelativeToolTip": "BTL_XML_QL_BanGiay\\UserControls\\DanhMuc.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T04:55:48.286Z",
+              "WhenOpened": "2025-11-27T06:29:23.341Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HieuGiay.cs",
+              "DocumentMoniker": "D:\\CNTT-SPKT\\CNTT-SPKT\\qlibangiay\\BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay\\UserControls\\HieuGiay.cs",
+              "RelativeDocumentMoniker": "BTL_XML_QL_BanGiay\\UserControls\\HieuGiay.cs",
+              "ToolTip": "D:\\CNTT-SPKT\\CNTT-SPKT\\qlibangiay\\BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay\\UserControls\\HieuGiay.cs",
+              "RelativeToolTip": "BTL_XML_QL_BanGiay\\UserControls\\HieuGiay.cs",
+              "ViewState": "AgIAAKUAAAAAAAAAAAAIwLsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T06:02:21.088Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HieuGiay.cs [Design]",
+              "DocumentMoniker": "D:\\CNTT-SPKT\\CNTT-SPKT\\qlibangiay\\BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay\\UserControls\\HieuGiay.cs",
+              "RelativeDocumentMoniker": "BTL_XML_QL_BanGiay\\UserControls\\HieuGiay.cs",
+              "ToolTip": "D:\\CNTT-SPKT\\CNTT-SPKT\\qlibangiay\\BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay\\UserControls\\HieuGiay.cs [Design]",
+              "RelativeToolTip": "BTL_XML_QL_BanGiay\\UserControls\\HieuGiay.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T06:02:13.406Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1524,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3fd5e0cc-709a-4f8c-94c3-7f0f8dff5bb2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             }
           ]
         }
