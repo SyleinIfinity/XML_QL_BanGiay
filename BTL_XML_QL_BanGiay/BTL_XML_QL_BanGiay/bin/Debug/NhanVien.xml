@@ -21,28 +21,28 @@
   </xs:schema>
   <_x0027_NhanVien_x0027_>
     <manhanvien>NV001</manhanvien>
-    <hoten>Cường Cao</hoten>
-    <diachi>123 Đường ABC, Quận 1, TP.HCM</diachi>
+    <hoten>Quách Tỉnh</hoten>
+    <diachi>48 Cao Thắng,Hải Châu,Đà Nẵng</diachi>
     <sdt>0912345678</sdt>
-    <email>a.nguyen@example.com</email>
+    <email>lhqtinh2005@gmail.com</email>
   </_x0027_NhanVien_x0027_>
   <_x0027_NhanVien_x0027_>
     <manhanvien>NV002</manhanvien>
-    <hoten>Vũ không ngủuu</hoten>
+    <hoten>Khánh Ngọc</hoten>
     <diachi>456 Đường DEF, Quận 2, TP.HCM</diachi>
     <sdt>0923456789</sdt>
-    <email>b.phan@example.com</email>
+    <email>kngocn@example.com</email>
   </_x0027_NhanVien_x0027_>
   <_x0027_NhanVien_x0027_>
     <manhanvien>NV003</manhanvien>
-    <hoten>Hải da vàng</hoten>
+    <hoten>Khánh Sky</hoten>
     <diachi>789 Đường GHI, Quận 3, TP.HCM</diachi>
     <sdt>0934567890</sdt>
-    <email>c.hoang@example.com</email>
+    <email>khanh@example.com</email>
   </_x0027_NhanVien_x0027_>
   <_x0027_NhanVien_x0027_>
-    <manhanvien>NVtesst</manhanvien>
-    <hoten>test</hoten>
+    <manhanvien>NV004</manhanvien>
+    <hoten>Ẩn Danh</hoten>
     <diachi>0</diachi>
     <sdt>0         </sdt>
     <email>test@gmail.com</email>

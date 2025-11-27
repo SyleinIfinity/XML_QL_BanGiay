@@ -64,6 +64,7 @@
             this.panelSlideMenu.Controls.Add(this.panelLogo);
             this.panelSlideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSlideMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelSlideMenu.Margin = new System.Windows.Forms.Padding(6);
             this.panelSlideMenu.Name = "panelSlideMenu";
             this.panelSlideMenu.Size = new System.Drawing.Size(195, 511);
             this.panelSlideMenu.TabIndex = 0;
@@ -96,8 +97,8 @@
             this.panel_change.Controls.Add(this.btn_XML_SQL);
             this.panel_change.Controls.Add(this.btn_SQL_XML);
             this.panel_change.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_change.Location = new System.Drawing.Point(0, 492);
-            this.panel_change.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel_change.Location = new System.Drawing.Point(0, 938);
+            this.panel_change.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel_change.Name = "panel_change";
             this.panel_change.Size = new System.Drawing.Size(178, 84);
             this.panel_change.TabIndex = 6;
@@ -140,6 +141,55 @@
             this.btn_SQL_XML.UseVisualStyleBackColor = false;
             this.btn_SQL_XML.Click += new System.EventHandler(this.btn_SQL_XML_Click);
             // 
+            // panel_managament
+            // 
+            this.panel_managament.Controls.Add(this.btn_bill);
+            this.panel_managament.Controls.Add(this.btn_shoe);
+            this.panel_managament.Controls.Add(this.btn_shoeBrand);
+            this.panel_managament.Controls.Add(this.btn_account);
+            this.panel_managament.Controls.Add(this.btn_category);
+            this.panel_managament.Controls.Add(this.btn_staff);
+            this.panel_managament.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_managament.Location = new System.Drawing.Point(0, 278);
+            this.panel_managament.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel_managament.Name = "panel_managament";
+            this.panel_managament.Size = new System.Drawing.Size(356, 472);
+            this.panel_managament.TabIndex = 3;
+            // 
+            // panel_main
+            // 
+            this.panel_main.AutoSize = true;
+            this.panel_main.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_main.Location = new System.Drawing.Point(390, 0);
+            this.panel_main.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel_main.Name = "panel_main";
+            this.panel_main.Size = new System.Drawing.Size(1336, 983);
+            this.panel_main.TabIndex = 1;
+            this.panel_main.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_main_Paint);
+            // 
+            // btn_dangXuat
+            // 
+            this.btn_dangXuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(62)))), ((int)(((byte)(156)))));
+            this.btn_dangXuat.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_dangXuat.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.btn_dangXuat.FlatAppearance.BorderSize = 0;
+            this.btn_dangXuat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.btn_dangXuat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.btn_dangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_dangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_dangXuat.ForeColor = System.Drawing.Color.White;
+            this.btn_dangXuat.Image = ((System.Drawing.Image)(resources.GetObject("btn_dangXuat.Image")));
+            this.btn_dangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_dangXuat.Location = new System.Drawing.Point(0, 1100);
+            this.btn_dangXuat.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btn_dangXuat.Name = "btn_dangXuat";
+            this.btn_dangXuat.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.btn_dangXuat.Size = new System.Drawing.Size(356, 94);
+            this.btn_dangXuat.TabIndex = 7;
+            this.btn_dangXuat.Text = "Đăng xuất";
+            this.btn_dangXuat.UseVisualStyleBackColor = false;
+            this.btn_dangXuat.Click += new System.EventHandler(this.btn_dangXuat_Click);
+            // 
             // btn_chuyenDoi
             // 
             this.btn_chuyenDoi.BackColor = System.Drawing.Color.Black;
@@ -153,8 +203,8 @@
             this.btn_chuyenDoi.ForeColor = System.Drawing.Color.White;
             this.btn_chuyenDoi.Image = ((System.Drawing.Image)(resources.GetObject("btn_chuyenDoi.Image")));
             this.btn_chuyenDoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_chuyenDoi.Location = new System.Drawing.Point(0, 443);
-            this.btn_chuyenDoi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_chuyenDoi.Location = new System.Drawing.Point(0, 844);
+            this.btn_chuyenDoi.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btn_chuyenDoi.Name = "btn_chuyenDoi";
             this.btn_chuyenDoi.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.btn_chuyenDoi.Size = new System.Drawing.Size(178, 49);
@@ -176,8 +226,8 @@
             this.btn_veChungToi.ForeColor = System.Drawing.Color.White;
             this.btn_veChungToi.Image = ((System.Drawing.Image)(resources.GetObject("btn_veChungToi.Image")));
             this.btn_veChungToi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_veChungToi.Location = new System.Drawing.Point(0, 394);
-            this.btn_veChungToi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_veChungToi.Location = new System.Drawing.Point(0, 750);
+            this.btn_veChungToi.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btn_veChungToi.Name = "btn_veChungToi";
             this.btn_veChungToi.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.btn_veChungToi.Size = new System.Drawing.Size(178, 49);
@@ -334,8 +384,8 @@
             this.btn_managament.ForeColor = System.Drawing.SystemColors.Window;
             this.btn_managament.Image = ((System.Drawing.Image)(resources.GetObject("btn_managament.Image")));
             this.btn_managament.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_managament.Location = new System.Drawing.Point(0, 100);
-            this.btn_managament.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_managament.Location = new System.Drawing.Point(0, 184);
+            this.btn_managament.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btn_managament.Name = "btn_managament";
             this.btn_managament.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.btn_managament.Size = new System.Drawing.Size(178, 49);
@@ -346,11 +396,12 @@
             // 
             // panelLogo
             // 
+            this.panelLogo.BackgroundImage = global::BTL_XML_QL_BanGiay.Properties.Resources.logo1;
             this.panelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(178, 100);
+            this.panelLogo.Size = new System.Drawing.Size(356, 184);
             this.panelLogo.TabIndex = 1;
             // 
             // panel_main
@@ -366,17 +417,20 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(752, 511);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1726, 983);
             this.Controls.Add(this.panel_main);
             this.Controls.Add(this.panelSlideMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(765, 484);
+            this.Margin = new System.Windows.Forms.Padding(6);
+            this.MinimumSize = new System.Drawing.Size(1514, 894);
             this.Name = "TrangChu";
             this.Text = "TrangChu";
             this.panelSlideMenu.ResumeLayout(false);
             this.panel_change.ResumeLayout(false);
             this.panel_managament.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

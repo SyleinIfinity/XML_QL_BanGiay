@@ -27,7 +27,7 @@ namespace BTL_XML_QL_BanGiay.Forms
         public TrangChu(UserRole role)
         {
             InitializeComponent();
-            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = FormBorderStyle.Sizable;
             this.StartPosition = FormStartPosition.CenterScreen;
             this.Role = role;
             tuyChinhMenu();
@@ -239,6 +239,11 @@ namespace BTL_XML_QL_BanGiay.Forms
             {
                 Cursor = Cursors.Default;
             }
+        }
+
+        private void panel_main_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

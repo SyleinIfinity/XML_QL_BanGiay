@@ -57,3 +57,4 @@ F:\23115053122114_K23_PhanVanKhanh\College_Year03\125\XML\baicuoiky\BTL_XML_QL_B
 F:\23115053122114_K23_PhanVanKhanh\College_Year03\125\XML\baicuoiky\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_.E14C9A90.Up2Date
 F:\23115053122114_K23_PhanVanKhanh\College_Year03\125\XML\baicuoiky\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.exe
 F:\23115053122114_K23_PhanVanKhanh\College_Year03\125\XML\baicuoiky\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.pdb
+C:\Study-Win\XML\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.csprojAssemblyReference.cache
