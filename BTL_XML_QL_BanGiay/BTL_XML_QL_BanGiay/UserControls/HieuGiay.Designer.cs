@@ -46,7 +46,7 @@
             // 
             this.txtField_timKiem.Depth = 0;
             this.txtField_timKiem.Hint = "Tìm kiếm theo mã hiệu giày";
-            this.txtField_timKiem.Location = new System.Drawing.Point(256, 66);
+            this.txtField_timKiem.Location = new System.Drawing.Point(237, 61);
             this.txtField_timKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtField_timKiem.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtField_timKiem.Name = "txtField_timKiem";
@@ -54,7 +54,7 @@
             this.txtField_timKiem.SelectedText = "";
             this.txtField_timKiem.SelectionLength = 0;
             this.txtField_timKiem.SelectionStart = 0;
-            this.txtField_timKiem.Size = new System.Drawing.Size(227, 28);
+            this.txtField_timKiem.Size = new System.Drawing.Size(360, 28);
             this.txtField_timKiem.TabIndex = 51;
             this.txtField_timKiem.UseSystemPasswordChar = false;
             // 
@@ -105,7 +105,7 @@
             // txtField_tenHieuGiay
             // 
             this.txtField_tenHieuGiay.Depth = 0;
-            this.txtField_tenHieuGiay.Hint = "Tên hiệu giày";
+            this.txtField_tenHieuGiay.Hint = "";
             this.txtField_tenHieuGiay.Location = new System.Drawing.Point(527, 124);
             this.txtField_tenHieuGiay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtField_tenHieuGiay.MouseState = MaterialSkin.MouseState.HOVER;
@@ -121,17 +121,17 @@
             // lbl_tenHieuGiay
             // 
             this.lbl_tenHieuGiay.AutoSize = true;
-            this.lbl_tenHieuGiay.Font = new System.Drawing.Font("Roboto Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbl_tenHieuGiay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbl_tenHieuGiay.Location = new System.Drawing.Point(375, 124);
             this.lbl_tenHieuGiay.Name = "lbl_tenHieuGiay";
-            this.lbl_tenHieuGiay.Size = new System.Drawing.Size(132, 24);
+            this.lbl_tenHieuGiay.Size = new System.Drawing.Size(129, 23);
             this.lbl_tenHieuGiay.TabIndex = 45;
-            this.lbl_tenHieuGiay.Text = "Tên hiệu giày";
+            this.lbl_tenHieuGiay.Text = "Tên hiệu giày:";
             // 
             // txtField_maHieuGiay
             // 
             this.txtField_maHieuGiay.Depth = 0;
-            this.txtField_maHieuGiay.Hint = "Mã hiệu giày";
+            this.txtField_maHieuGiay.Hint = "";
             this.txtField_maHieuGiay.Location = new System.Drawing.Point(155, 124);
             this.txtField_maHieuGiay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtField_maHieuGiay.MouseState = MaterialSkin.MouseState.HOVER;
@@ -147,23 +147,23 @@
             // lbl_maHieuGiay
             // 
             this.lbl_maHieuGiay.AutoSize = true;
-            this.lbl_maHieuGiay.Font = new System.Drawing.Font("Roboto Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbl_maHieuGiay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbl_maHieuGiay.Location = new System.Drawing.Point(15, 124);
             this.lbl_maHieuGiay.Name = "lbl_maHieuGiay";
-            this.lbl_maHieuGiay.Size = new System.Drawing.Size(127, 24);
+            this.lbl_maHieuGiay.Size = new System.Drawing.Size(125, 23);
             this.lbl_maHieuGiay.TabIndex = 43;
-            this.lbl_maHieuGiay.Text = "Mã hiệu giày";
+            this.lbl_maHieuGiay.Text = "Mã hiệu giày:";
             // 
             // lbl_Top
             // 
             this.lbl_Top.AutoSize = true;
-            this.lbl_Top.Font = new System.Drawing.Font("Roboto Black", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbl_Top.Font = new System.Drawing.Font("Myanmar Text", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbl_Top.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(252)))));
             this.lbl_Top.Location = new System.Drawing.Point(285, 11);
             this.lbl_Top.Name = "lbl_Top";
-            this.lbl_Top.Size = new System.Drawing.Size(135, 34);
+            this.lbl_Top.Size = new System.Drawing.Size(158, 33);
             this.lbl_Top.TabIndex = 42;
-            this.lbl_Top.Text = "Hiệu giày";
+            this.lbl_Top.Text = "HIỆU GIÀY";
             // 
             // HieuGiay
             // 

@@ -1,39 +1,21 @@
-C:\Users\ADMIN\OneDrive - University of Technology and Education\thirdYear\XML\LT\CK\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.csproj.AssemblyReference.cache
-C:\Users\ADMIN\OneDrive - University of Technology and Education\thirdYear\XML\LT\CK\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.Forms.DangNhap.resources
-C:\Users\ADMIN\OneDrive - University of Technology and Education\thirdYear\XML\LT\CK\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.Properties.Resources.resources
-C:\Users\ADMIN\OneDrive - University of Technology and Education\thirdYear\XML\LT\CK\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.csproj.GenerateResource.cache
-C:\Users\ADMIN\OneDrive - University of Technology and Education\thirdYear\XML\LT\CK\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.csproj.CoreCompileInputs.cache
-C:\Users\ADMIN\OneDrive - University of Technology and Education\thirdYear\XML\LT\CK\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\bin\Debug\BTL_XML_QL_BanGiay.exe.config
-C:\Users\ADMIN\OneDrive - University of Technology and Education\thirdYear\XML\LT\CK\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\bin\Debug\BTL_XML_QL_BanGiay.exe
-C:\Users\ADMIN\OneDrive - University of Technology and Education\thirdYear\XML\LT\CK\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\bin\Debug\BTL_XML_QL_BanGiay.pdb
-C:\Users\ADMIN\OneDrive - University of Technology and Education\thirdYear\XML\LT\CK\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\bin\Debug\MaterialSkin.dll
-C:\Users\ADMIN\OneDrive - University of Technology and Education\thirdYear\XML\LT\CK\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_.E14C9A90.Up2Date
-C:\Users\ADMIN\OneDrive - University of Technology and Education\thirdYear\XML\LT\CK\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.exe
-C:\Users\ADMIN\OneDrive - University of Technology and Education\thirdYear\XML\LT\CK\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.pdb
-C:\Users\ADMIN\OneDrive - University of Technology and Education\thirdYear\XML\LT\CK\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.UserControls.Giay.resources
-C:\Users\ADMIN\OneDrive - University of Technology and Education\thirdYear\XML\LT\CK\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.Forms.TaiKhoan.resources
-C:\Users\ADMIN\OneDrive - University of Technology and Education\thirdYear\XML\LT\CK\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.UserControls.DanhMuc.resources
-C:\Users\ADMIN\OneDrive - University of Technology and Education\thirdYear\XML\LT\CK\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.UserControls.HieuGiay.resources
-C:\Users\ADMIN\OneDrive - University of Technology and Education\thirdYear\XML\LT\CK\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.UserControls.HoaDon.resources
-C:\Users\ADMIN\OneDrive - University of Technology and Education\thirdYear\XML\LT\CK\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.UserControls.NhanVien.resources
-C:\Users\ADMIN\OneDrive - University of Technology and Education\thirdYear\XML\LT\CK\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.Forms.TrangChu.resources
-C:\Users\ADMIN\OneDrive - University of Technology and Education\thirdYear\XML\LT\CK\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.UserControls.ThemHoaDon.resources
-C:\Study-Win\XML\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\bin\Debug\BTL_XML_QL_BanGiay.exe.config
-C:\Study-Win\XML\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\bin\Debug\BTL_XML_QL_BanGiay.exe
-C:\Study-Win\XML\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\bin\Debug\BTL_XML_QL_BanGiay.pdb
-C:\Study-Win\XML\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\bin\Debug\MaterialSkin.dll
-C:\Study-Win\XML\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.Forms.DangNhap.resources
-C:\Study-Win\XML\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.Forms.TrangChu.resources
-C:\Study-Win\XML\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.Properties.Resources.resources
-C:\Study-Win\XML\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.UserControls.DanhMuc.resources
-C:\Study-Win\XML\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.UserControls.Giay.resources
-C:\Study-Win\XML\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.UserControls.HieuGiay.resources
-C:\Study-Win\XML\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.UserControls.HoaDon.resources
-C:\Study-Win\XML\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.UserControls.ThemHoaDon.resources
-C:\Study-Win\XML\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.UserControls.NhanVien.resources
-C:\Study-Win\XML\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.Forms.TaiKhoan.resources
-C:\Study-Win\XML\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.csproj.GenerateResource.cache
-C:\Study-Win\XML\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.csproj.CoreCompileInputs.cache
-C:\Study-Win\XML\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.csproj.CopyComplete
-C:\Study-Win\XML\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.exe
-C:\Study-Win\XML\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.pdb
+D:\CNTT-SPKT\CNTT-SPKT\qlibangiay\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\bin\Debug\BTL_XML_QL_BanGiay.exe.config
+D:\CNTT-SPKT\CNTT-SPKT\qlibangiay\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\bin\Debug\BTL_XML_QL_BanGiay.exe
+D:\CNTT-SPKT\CNTT-SPKT\qlibangiay\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\bin\Debug\BTL_XML_QL_BanGiay.pdb
+D:\CNTT-SPKT\CNTT-SPKT\qlibangiay\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\bin\Debug\MaterialSkin.dll
+D:\CNTT-SPKT\CNTT-SPKT\qlibangiay\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.csproj.AssemblyReference.cache
+D:\CNTT-SPKT\CNTT-SPKT\qlibangiay\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.Forms.DangNhap.resources
+D:\CNTT-SPKT\CNTT-SPKT\qlibangiay\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.Forms.TrangChu.resources
+D:\CNTT-SPKT\CNTT-SPKT\qlibangiay\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.Properties.Resources.resources
+D:\CNTT-SPKT\CNTT-SPKT\qlibangiay\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.UserControls.DanhMuc.resources
+D:\CNTT-SPKT\CNTT-SPKT\qlibangiay\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.UserControls.Giay.resources
+D:\CNTT-SPKT\CNTT-SPKT\qlibangiay\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.UserControls.HieuGiay.resources
+D:\CNTT-SPKT\CNTT-SPKT\qlibangiay\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.UserControls.HoaDon.resources
+D:\CNTT-SPKT\CNTT-SPKT\qlibangiay\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.UserControls.ThemHoaDon.resources
+D:\CNTT-SPKT\CNTT-SPKT\qlibangiay\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.UserControls.NhanVien.resources
+D:\CNTT-SPKT\CNTT-SPKT\qlibangiay\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.Forms.TaiKhoan.resources
+D:\CNTT-SPKT\CNTT-SPKT\qlibangiay\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.csproj.GenerateResource.cache
+D:\CNTT-SPKT\CNTT-SPKT\qlibangiay\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.csproj.CoreCompileInputs.cache
+D:\CNTT-SPKT\CNTT-SPKT\qlibangiay\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_.E14C9A90.Up2Date
+D:\CNTT-SPKT\CNTT-SPKT\qlibangiay\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.exe
+D:\CNTT-SPKT\CNTT-SPKT\qlibangiay\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.pdb
+D:\CNTT-SPKT\CNTT-SPKT\qlibangiay\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.exe.config
