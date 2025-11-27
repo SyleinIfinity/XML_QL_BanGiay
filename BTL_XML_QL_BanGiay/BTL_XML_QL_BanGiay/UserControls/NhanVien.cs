@@ -22,10 +22,17 @@ namespace BTL_XML_QL_BanGiay.UserControls
             loadNhanVien();
             dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
             txtField_timKiem.TextChanged += txtField_timKiem_TextChanged;
+            txtField_timKiem.Width = 138;
+            txtField_hoTen.Width = 138;
+            txtField_maNhanVien.Width =168;
+            txtField_diaChi.Width = 138;
+            txtField_soDienThoai.Width = 138;
+            txtField_email.Width = 138;
         }
 
         private void loadNhanVien()
         {           
+
             try
             {
                 DataTable dt = cnn.showTable("NhanVien.xml");
@@ -171,6 +178,11 @@ namespace BTL_XML_QL_BanGiay.UserControls
             {
                 MessageBox.Show("Lỗi khi tìm kiếm: " + ex.Message);
             }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

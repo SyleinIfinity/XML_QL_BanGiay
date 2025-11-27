@@ -18,6 +18,8 @@ namespace BTL_XML_QL_BanGiay.Forms
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
             this.StartPosition = FormStartPosition.CenterScreen;
+            txtField_staffCode.Width = 252;
+            txtField_password.Width = 252;
         }
 
         private void btn_close_Click(object sender, EventArgs e)
@@ -108,6 +110,11 @@ namespace BTL_XML_QL_BanGiay.Forms
                 btn_showPass.BackgroundImage = Properties.Resources.eye;
                 txtField_password.UseSystemPasswordChar = false;
             }
+
+        }
+
+        private void txtField_staffCode_Click(object sender, EventArgs e)
+        {
 
         }
     }

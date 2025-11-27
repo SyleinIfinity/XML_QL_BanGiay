@@ -36,14 +36,14 @@
             this.btn_close = new System.Windows.Forms.Button();
             this.materialCheckBox1 = new MaterialSkin.Controls.MaterialCheckBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.gradientPanel1 = new BTL_XML_QL_BanGiay.Utilities.GradientPanel();
             this.btn_showPass = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.gradientPanel1 = new BTL_XML_QL_BanGiay.Utilities.GradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.gradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.gradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +61,8 @@
             // 
             // txtField_staffCode
             // 
-            this.txtField_staffCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtField_staffCode.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtField_staffCode.BackColor = System.Drawing.Color.White;
             this.txtField_staffCode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txtField_staffCode.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -78,10 +79,12 @@
             this.txtField_staffCode.Size = new System.Drawing.Size(552, 41);
             this.txtField_staffCode.TabIndex = 2;
             this.txtField_staffCode.UseSystemPasswordChar = false;
+            this.txtField_staffCode.Click += new System.EventHandler(this.txtField_staffCode_Click);
             // 
             // txtField_password
             // 
-            this.txtField_password.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtField_password.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtField_password.BackColor = System.Drawing.Color.White;
             this.txtField_password.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.txtField_password.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -156,16 +159,6 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Quên mật khẩu";
             // 
-            // gradientPanel1
-            // 
-            this.gradientPanel1.ColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
-            this.gradientPanel1.ColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(240)))), ((int)(((byte)(210)))));
-            this.gradientPanel1.Controls.Add(this.pictureBox1);
-            this.gradientPanel1.Location = new System.Drawing.Point(-1, 2);
-            this.gradientPanel1.Name = "gradientPanel1";
-            this.gradientPanel1.Size = new System.Drawing.Size(458, 740);
-            this.gradientPanel1.TabIndex = 7;
-            // 
             // btn_showPass
             // 
             this.btn_showPass.BackColor = System.Drawing.Color.Transparent;
@@ -202,6 +195,16 @@
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
             // 
+            // gradientPanel1
+            // 
+            this.gradientPanel1.ColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(200)))), ((int)(((byte)(180)))));
+            this.gradientPanel1.ColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(240)))), ((int)(((byte)(210)))));
+            this.gradientPanel1.Controls.Add(this.pictureBox1);
+            this.gradientPanel1.Location = new System.Drawing.Point(-1, 2);
+            this.gradientPanel1.Name = "gradientPanel1";
+            this.gradientPanel1.Size = new System.Drawing.Size(458, 740);
+            this.gradientPanel1.TabIndex = 7;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -236,9 +239,9 @@
             this.Name = "DangNhap";
             this.Text = "Đăng nhập";
             this.Load += new System.EventHandler(this.DangNhap_Load);
-            this.gradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.gradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

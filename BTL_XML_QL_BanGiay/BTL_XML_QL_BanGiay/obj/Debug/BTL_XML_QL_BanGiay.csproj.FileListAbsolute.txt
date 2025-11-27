@@ -37,3 +37,4 @@ C:\Study-Win\XML\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanG
 C:\Study-Win\XML\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.csproj.CopyComplete
 C:\Study-Win\XML\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.exe
 C:\Study-Win\XML\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.pdb
+C:\Study-Win\XML\BTL_XML_QL_BanGiay\BTL_XML_QL_BanGiay\obj\Debug\BTL_XML_QL_BanGiay.csprojAssemblyReference.cache
