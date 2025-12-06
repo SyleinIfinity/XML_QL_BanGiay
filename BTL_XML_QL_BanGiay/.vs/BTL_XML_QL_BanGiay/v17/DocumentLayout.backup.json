@@ -3,52 +3,8 @@
   "WorkspaceRootPath": "F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay\\bin\\Debug\\TaiKhoan.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BTL_XML_QL_BanGiay\\bin\\Debug\\TaiKhoan.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{04A175C5-3E66-4170-9DB8-1B47320C0BAE}|BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay.csproj|f:\\23115053122114_k23_phanvankhanh\\college_year03\\125\\xml\\baicuoiky\\btl_xml_ql_bangiay\\btl_xml_ql_bangiay\\forms\\trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{04A175C5-3E66-4170-9DB8-1B47320C0BAE}|BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay.csproj|solutionrelative:btl_xml_ql_bangiay\\forms\\trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04A175C5-3E66-4170-9DB8-1B47320C0BAE}|BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay.csproj|F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\btl_xml_ql_bangiay\\usercontrols\\themhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{04A175C5-3E66-4170-9DB8-1B47320C0BAE}|BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay.csproj|solutionrelative:btl_xml_ql_bangiay\\usercontrols\\themhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04A175C5-3E66-4170-9DB8-1B47320C0BAE}|BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay.csproj|F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\btl_xml_ql_bangiay\\usercontrols\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{04A175C5-3E66-4170-9DB8-1B47320C0BAE}|BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay.csproj|solutionrelative:btl_xml_ql_bangiay\\usercontrols\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04A175C5-3E66-4170-9DB8-1B47320C0BAE}|BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay.csproj|F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\btl_xml_ql_bangiay\\usercontrols\\taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{04A175C5-3E66-4170-9DB8-1B47320C0BAE}|BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay.csproj|solutionrelative:btl_xml_ql_bangiay\\usercontrols\\taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04A175C5-3E66-4170-9DB8-1B47320C0BAE}|BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay.csproj|F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\btl_xml_ql_bangiay\\usercontrols\\nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{04A175C5-3E66-4170-9DB8-1B47320C0BAE}|BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay.csproj|solutionrelative:btl_xml_ql_bangiay\\usercontrols\\nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04A175C5-3E66-4170-9DB8-1B47320C0BAE}|BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay.csproj|F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\btl_xml_ql_bangiay\\usercontrols\\hieugiay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{04A175C5-3E66-4170-9DB8-1B47320C0BAE}|BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay.csproj|solutionrelative:btl_xml_ql_bangiay\\usercontrols\\hieugiay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04A175C5-3E66-4170-9DB8-1B47320C0BAE}|BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay.csproj|F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\btl_xml_ql_bangiay\\usercontrols\\giay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{04A175C5-3E66-4170-9DB8-1B47320C0BAE}|BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay.csproj|solutionrelative:btl_xml_ql_bangiay\\usercontrols\\giay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04A175C5-3E66-4170-9DB8-1B47320C0BAE}|BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay.csproj|F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\btl_xml_ql_bangiay\\usercontrols\\danhmuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{04A175C5-3E66-4170-9DB8-1B47320C0BAE}|BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay.csproj|solutionrelative:btl_xml_ql_bangiay\\usercontrols\\danhmuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04A175C5-3E66-4170-9DB8-1B47320C0BAE}|BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay.csproj|F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\btl_xml_ql_bangiay\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{04A175C5-3E66-4170-9DB8-1B47320C0BAE}|BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay.csproj|solutionrelative:btl_xml_ql_bangiay\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04A175C5-3E66-4170-9DB8-1B47320C0BAE}|BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay.csproj|F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\btl_xml_ql_bangiay\\forms\\trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{04A175C5-3E66-4170-9DB8-1B47320C0BAE}|BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay.csproj|solutionrelative:btl_xml_ql_bangiay\\forms\\trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04A175C5-3E66-4170-9DB8-1B47320C0BAE}|BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay.csproj|F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\btl_xml_ql_bangiay\\models\\connect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{04A175C5-3E66-4170-9DB8-1B47320C0BAE}|BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay.csproj|solutionrelative:btl_xml_ql_bangiay\\models\\connect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -63,142 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TaiKhoan.xml",
-              "DocumentMoniker": "F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay\\bin\\Debug\\TaiKhoan.xml",
-              "RelativeDocumentMoniker": "BTL_XML_QL_BanGiay\\bin\\Debug\\TaiKhoan.xml",
-              "ToolTip": "F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay\\bin\\Debug\\TaiKhoan.xml",
-              "RelativeToolTip": "BTL_XML_QL_BanGiay\\bin\\Debug\\TaiKhoan.xml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2025-11-22T04:53:48.157Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TaiKhoan.cs [Design]",
-              "DocumentMoniker": "F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay\\UserControls\\TaiKhoan.cs",
-              "RelativeDocumentMoniker": "BTL_XML_QL_BanGiay\\UserControls\\TaiKhoan.cs",
-              "ToolTip": "F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay\\UserControls\\TaiKhoan.cs [Design]",
-              "RelativeToolTip": "BTL_XML_QL_BanGiay\\UserControls\\TaiKhoan.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T05:55:11.746Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ThemHoaDon.cs [Design]",
-              "DocumentMoniker": "F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay\\UserControls\\ThemHoaDon.cs",
-              "RelativeDocumentMoniker": "BTL_XML_QL_BanGiay\\UserControls\\ThemHoaDon.cs",
-              "ToolTip": "F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay\\UserControls\\ThemHoaDon.cs [Design]",
-              "RelativeToolTip": "BTL_XML_QL_BanGiay\\UserControls\\ThemHoaDon.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T05:54:59.441Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HoaDon.cs [Design]",
-              "DocumentMoniker": "F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay\\UserControls\\HoaDon.cs",
-              "RelativeDocumentMoniker": "BTL_XML_QL_BanGiay\\UserControls\\HoaDon.cs",
-              "ToolTip": "F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay\\UserControls\\HoaDon.cs [Design]",
-              "RelativeToolTip": "BTL_XML_QL_BanGiay\\UserControls\\HoaDon.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T05:55:13.026Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "TrangChu.cs [Design]",
               "DocumentMoniker": "F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay\\Forms\\TrangChu.cs",
               "RelativeDocumentMoniker": "BTL_XML_QL_BanGiay\\Forms\\TrangChu.cs",
               "ToolTip": "F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay\\Forms\\TrangChu.cs [Design]",
               "RelativeToolTip": "BTL_XML_QL_BanGiay\\Forms\\TrangChu.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T04:55:48.286Z",
+              "WhenOpened": "2025-11-27T16:07:40.884Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "NhanVien.cs [Design]",
-              "DocumentMoniker": "F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay\\UserControls\\NhanVien.cs",
-              "RelativeDocumentMoniker": "BTL_XML_QL_BanGiay\\UserControls\\NhanVien.cs",
-              "ToolTip": "F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay\\UserControls\\NhanVien.cs [Design]",
-              "RelativeToolTip": "BTL_XML_QL_BanGiay\\UserControls\\NhanVien.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T05:54:57.333Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "HieuGiay.cs [Design]",
-              "DocumentMoniker": "F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay\\UserControls\\HieuGiay.cs",
-              "RelativeDocumentMoniker": "BTL_XML_QL_BanGiay\\UserControls\\HieuGiay.cs",
-              "ToolTip": "F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay\\UserControls\\HieuGiay.cs [Design]",
-              "RelativeToolTip": "BTL_XML_QL_BanGiay\\UserControls\\HieuGiay.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T05:55:02.459Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Giay.cs [Design]",
-              "DocumentMoniker": "F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay\\UserControls\\Giay.cs",
-              "RelativeDocumentMoniker": "BTL_XML_QL_BanGiay\\UserControls\\Giay.cs",
-              "ToolTip": "F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay\\UserControls\\Giay.cs [Design]",
-              "RelativeToolTip": "BTL_XML_QL_BanGiay\\UserControls\\Giay.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T05:55:14.363Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "DanhMuc.cs [Design]",
-              "DocumentMoniker": "F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay\\UserControls\\DanhMuc.cs",
-              "RelativeDocumentMoniker": "BTL_XML_QL_BanGiay\\UserControls\\DanhMuc.cs",
-              "ToolTip": "F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay\\UserControls\\DanhMuc.cs [Design]",
-              "RelativeToolTip": "BTL_XML_QL_BanGiay\\UserControls\\DanhMuc.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T05:52:39.915Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Program.cs",
-              "DocumentMoniker": "F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay\\Program.cs",
-              "RelativeDocumentMoniker": "BTL_XML_QL_BanGiay\\Program.cs",
-              "ToolTip": "F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay\\Program.cs",
-              "RelativeToolTip": "BTL_XML_QL_BanGiay\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T05:41:30.879Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Connect.cs",
-              "DocumentMoniker": "F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay\\Models\\Connect.cs",
-              "RelativeDocumentMoniker": "BTL_XML_QL_BanGiay\\Models\\Connect.cs",
-              "ToolTip": "F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay\\Models\\Connect.cs",
-              "RelativeToolTip": "BTL_XML_QL_BanGiay\\Models\\Connect.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T05:39:36.19Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "TrangChu.cs",
-              "DocumentMoniker": "F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay\\Forms\\TrangChu.cs",
-              "RelativeDocumentMoniker": "BTL_XML_QL_BanGiay\\Forms\\TrangChu.cs",
-              "ToolTip": "F:\\23115053122114_K23_PhanVanKhanh\\College_Year03\\125\\XML\\baicuoiky\\BTL_XML_QL_BanGiay\\BTL_XML_QL_BanGiay\\Forms\\TrangChu.cs",
-              "RelativeToolTip": "BTL_XML_QL_BanGiay\\Forms\\TrangChu.cs",
-              "ViewState": "AgIAANEAAAAAAAAAAAAowM8AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T05:38:23.072Z",
-              "EditorCaption": ""
             }
           ]
         }

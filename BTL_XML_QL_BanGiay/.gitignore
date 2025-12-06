@@ -1,0 +1,38 @@
+## --- Visual Studio Core ---
+# Thư mục chứa cấu hình tạm của VS (Rất nặng và không cần thiết)
+.vs/
+
+# Thư mục kết quả build (Rác)
+[Bb]in/
+[Oo]bj/
+
+# Các file cấu hình người dùng (Chứa đường dẫn ổ cứng cá nhân của em)
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+
+## --- NuGet Packages ---
+# Thường thì ta không commit thư mục packages, mà để NuGet tự restore
+packages/
+*.nupkg
+
+## --- File tạm & Log hệ thống ---
+*.log
+*.tmp
+*.cache
+*.swp
+
+## --- File hệ điều hành (Windows/Mac) ---
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+## --- Cấu hình riêng khác ---
+# Nếu em dùng ReSharper
+_ReSharper.*/
+*.ReSharper.user
+
+# File lock của project (nếu có)
+*.lock.json

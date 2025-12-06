@@ -54,7 +54,7 @@
             this.txtField_timKiem.SelectedText = "";
             this.txtField_timKiem.SelectionLength = 0;
             this.txtField_timKiem.SelectionStart = 0;
-            this.txtField_timKiem.Size = new System.Drawing.Size(272, 28);
+            this.txtField_timKiem.Size = new System.Drawing.Size(376, 28);
             this.txtField_timKiem.TabIndex = 40;
             this.txtField_timKiem.UseSystemPasswordChar = false;
             // 
@@ -105,7 +105,7 @@
             // txtField_tenDanhMuc
             // 
             this.txtField_tenDanhMuc.Depth = 0;
-            this.txtField_tenDanhMuc.Hint = "Tên danh mục";
+            this.txtField_tenDanhMuc.Hint = "";
             this.txtField_tenDanhMuc.Location = new System.Drawing.Point(524, 124);
             this.txtField_tenDanhMuc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtField_tenDanhMuc.MouseState = MaterialSkin.MouseState.HOVER;
@@ -121,17 +121,17 @@
             // lbl_tenDanhMuc
             // 
             this.lbl_tenDanhMuc.AutoSize = true;
-            this.lbl_tenDanhMuc.Font = new System.Drawing.Font("Roboto Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbl_tenDanhMuc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbl_tenDanhMuc.Location = new System.Drawing.Point(377, 124);
             this.lbl_tenDanhMuc.Name = "lbl_tenDanhMuc";
-            this.lbl_tenDanhMuc.Size = new System.Drawing.Size(136, 24);
+            this.lbl_tenDanhMuc.Size = new System.Drawing.Size(133, 23);
             this.lbl_tenDanhMuc.TabIndex = 31;
-            this.lbl_tenDanhMuc.Text = "Tên danh mục";
+            this.lbl_tenDanhMuc.Text = "Tên danh mục:";
             // 
             // txtField_maDanhMuc
             // 
             this.txtField_maDanhMuc.Depth = 0;
-            this.txtField_maDanhMuc.Hint = "Mã danh mục";
+            this.txtField_maDanhMuc.Hint = "";
             this.txtField_maDanhMuc.Location = new System.Drawing.Point(161, 124);
             this.txtField_maDanhMuc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtField_maDanhMuc.MouseState = MaterialSkin.MouseState.HOVER;
@@ -147,23 +147,23 @@
             // lbl_maDanhMuc
             // 
             this.lbl_maDanhMuc.AutoSize = true;
-            this.lbl_maDanhMuc.Font = new System.Drawing.Font("Roboto Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbl_maDanhMuc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbl_maDanhMuc.Location = new System.Drawing.Point(15, 124);
             this.lbl_maDanhMuc.Name = "lbl_maDanhMuc";
-            this.lbl_maDanhMuc.Size = new System.Drawing.Size(131, 24);
+            this.lbl_maDanhMuc.Size = new System.Drawing.Size(129, 23);
             this.lbl_maDanhMuc.TabIndex = 29;
-            this.lbl_maDanhMuc.Text = "Mã danh mục";
+            this.lbl_maDanhMuc.Text = "Mã danh mục:";
             // 
             // lbl_Top
             // 
             this.lbl_Top.AutoSize = true;
-            this.lbl_Top.Font = new System.Drawing.Font("Roboto Black", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbl_Top.Font = new System.Drawing.Font("Myanmar Text", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbl_Top.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(252)))));
             this.lbl_Top.Location = new System.Drawing.Point(285, 11);
             this.lbl_Top.Name = "lbl_Top";
-            this.lbl_Top.Size = new System.Drawing.Size(142, 34);
+            this.lbl_Top.Size = new System.Drawing.Size(167, 33);
             this.lbl_Top.TabIndex = 28;
-            this.lbl_Top.Text = "Danh mục";
+            this.lbl_Top.Text = "DANH MỤC";
             // 
             // DanhMuc
             // 
