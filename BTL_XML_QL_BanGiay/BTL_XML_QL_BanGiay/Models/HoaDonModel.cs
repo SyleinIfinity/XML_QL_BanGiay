@@ -201,5 +201,53 @@ namespace BTL_XML_QL_BanGiay.Models
                 throw new Exception($"Lỗi khi cập nhật số lượng tồn: {ex.Message}");
             }
         }
+
+        public void deleteHoaDon(string billCode)
+        {
+            try
+            {
+                // 1. Xóa trong file HoaDon.xml
+                string pathHD = Path.Combine(Application.StartupPath, "HoaDon.xml");
+                if (File.Exists(pathHD))
+                {
+                    XmlDocument doc = new XmlDocument();
+                    doc.Load(pathHD);
+
+                    // Tìm node hóa đơn có mã tương ứng
+                    // Lưu ý: Cấu trúc XPath phụ thuộc vào cách DataSet ghi file, thường là NewDataSet/_x0027_HoaDon_x0027_
+                    XmlNode node = doc.SelectSingleNode($"NewDataSet/_x0027_HoaDon_x0027_[mahoadon = '{billCode}']");
+
+                    if (node != null)
+                    {
+                        node.ParentNode.RemoveChild(node);
+                        doc.Save(pathHD);
+                    }
+                }
+
+                // 2. Xóa các chi tiết liên quan trong ChiTietHoaDon.xml (Cascade Delete)
+                string pathCT = Path.Combine(Application.StartupPath, "ChiTietHoaDon.xml");
+                if (File.Exists(pathCT))
+                {
+                    XmlDocument docCT = new XmlDocument();
+                    docCT.Load(pathCT);
+
+                    // Tìm tất cả các dòng chi tiết có mã hóa đơn này
+                    XmlNodeList listNodes = docCT.SelectNodes($"NewDataSet/_x0027_ChiTietHoaDon_x0027_[mahoadon = '{billCode}']");
+
+                    if (listNodes != null && listNodes.Count > 0)
+                    {
+                        foreach (XmlNode n in listNodes)
+                        {
+                            n.ParentNode.RemoveChild(n);
+                        }
+                        docCT.Save(pathCT);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi xóa hóa đơn: " + ex.Message);
+            }
+        }
     }   
 }

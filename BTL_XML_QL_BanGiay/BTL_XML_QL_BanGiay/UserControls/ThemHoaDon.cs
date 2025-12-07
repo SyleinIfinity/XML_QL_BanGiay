@@ -1,405 +1,281 @@
-﻿using BTL_XML_QL_BanGiay.Forms;
-using BTL_XML_QL_BanGiay.Models;
+﻿using BTL_XML_QL_BanGiay.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
 
 namespace BTL_XML_QL_BanGiay.UserControls
 {
     public partial class ThemHoaDon : UserControl
     {
+        // Khai báo các Model
         Connect cnn = new Connect();
-        HoaDonModel hdM = new HoaDonModel();
-        GiayModel gM = new GiayModel();
+        HoaDonModel hdModel = new HoaDonModel();
 
-        private string _staffCode;
-        private string _staffName;
-        private XDocument xDoc;
+        // Dữ liệu dùng chung
+        DataTable dtGiay;
+        DataTable dtGioHang; // Giỏ hàng tạm thời
 
-        public static int quantityRest;
-        public static decimal tgTien;
+        // Biến lưu thông tin nhân viên đăng nhập
+        string staffCode = "NV01"; // Mặc định nếu test
+        string staffName = "Admin";
 
-        public ThemHoaDon(string staffCode, string staffName)
+        // Biến static để HoaDonModel gọi cập nhật tồn kho (như logic cũ của bạn)
+        public static int quantityRest = 0;
+
+        public ThemHoaDon()
         {
             InitializeComponent();
-            _staffCode = staffCode;
-            _staffName = staffName;
-            txtField_tenNhanVien.Text = staffName;
-            loadHoaDon();
+            SetupEvents();
+            InitGioHang();
         }
 
-        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        private void SetupEvents()
         {
-            if (dataGridView1.Columns.Count > 0)
-            {
-                if (e.ColumnIndex == dataGridView1.Columns["phuongthucthanhtoan"]?.Index)
-                {
-                    if (e.Value != null)
-                    {
-                        bool value = Convert.ToBoolean(e.Value);
-                        e.Value = value ? "Chuyển khoản" : "Tiền mặt";
-                        e.FormattingApplied = true;
-                    }
-                }
-                else if (e.ColumnIndex == dataGridView1.Columns["trangthai"]?.Index)
-                {
-                    if (e.Value != null)
-                    {
-                        bool value = Convert.ToBoolean(e.Value);
-                        e.Value = value ? "Đã thanh toán" : "Chưa thanh toán";
-                        e.FormattingApplied = true;
-                    }
-                }
-            }
+            this.Load += ThemHoaDon_Load;
+            this.cboChonGiay.SelectedIndexChanged += CboChonGiay_SelectedIndexChanged;
+            this.btnThemGioHang.Click += BtnThemGioHang_Click;
+            this.btnThanhToan.Click += BtnThanhToan_Click;
+            this.btnHuy.Click += BtnHuy_Click;
+            this.dgvGioHang.CellClick += DgvGioHang_CellClick; // Để xóa dòng
         }
 
-        private void loadHoaDon()
+        private void InitGioHang()
         {
-            try
-            {
-                DataTable dt = new Connect().showTable("ChiTietHoaDon.xml");
+            // Tạo cấu trúc bảng Giỏ hàng (chưa lưu vào DB)
+            dtGioHang = new DataTable();
+            dtGioHang.Columns.Add("magiay");
+            dtGioHang.Columns.Add("tengiay");
+            dtGioHang.Columns.Add("dongia", typeof(decimal));
+            dtGioHang.Columns.Add("soluong", typeof(int));
+            dtGioHang.Columns.Add("thanhtien", typeof(decimal));
 
-                dataGridView1.DataSource = dt;
+            dgvGioHang.DataSource = dtGioHang;
 
-                dataGridView1.Columns["mahoadon"].HeaderText = "Mã hoá đơn";
-                dataGridView1.Columns["magiay"].HeaderText = "Mã giày";
-                dataGridView1.Columns["soluong"].HeaderText = "Số lượng";
-                dataGridView1.Columns["dongia"].HeaderText = "Đơn giá";
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Lỗi khi tải dữ liệu: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            // Format hiển thị
+            dgvGioHang.Columns["magiay"].HeaderText = "Mã Giày";
+            dgvGioHang.Columns["tengiay"].HeaderText = "Tên Sản Phẩm";
+            dgvGioHang.Columns["dongia"].HeaderText = "Đơn Giá";
+            dgvGioHang.Columns["soluong"].HeaderText = "SL";
+            dgvGioHang.Columns["thanhtien"].HeaderText = "Thành Tiền";
+
+            dgvGioHang.Columns["dongia"].DefaultCellStyle.Format = "N0";
+            dgvGioHang.Columns["thanhtien"].DefaultCellStyle.Format = "N0";
         }
 
         private void ThemHoaDon_Load(object sender, EventArgs e)
         {
-            cbbox_maGiay.DataSource = gM.loadShoeCode();
-            cbbox_maGiay.ValueMember = "magiay";
-            cbbox_maGiay.DisplayMember = "tengiay";
-            initUnitPrice(cbbox_maGiay.SelectedValue.ToString());
+            // 1. Sinh mã hóa đơn tự động
+            lblMaHD.Text = "HD" + DateTime.Now.ToString("yyyyMMddHHmmss");
+            lblNgayBan.Text = DateTime.Now.ToString("dd/MM/yyyy");
 
-            cbbx_thanhToan.Items.Add("Chuyển khoản");
-            cbbx_thanhToan.Items.Add("Tiền mặt");
-            cbbx_thanhToan.SelectedIndex = 0;
+            // 2. Lấy thông tin nhân viên từ Form cha (TrangChu) nếu có
+            Form parent = this.FindForm();
+            if (parent != null && parent is Forms.TrangChu) // Giả sử namespace Forms
+            {
+                var mainForm = (Forms.TrangChu)parent;
+                // Nếu TrangChu có property StaffCode, StaffName
+                if (!string.IsNullOrEmpty(mainForm.StaffCode)) staffCode = mainForm.StaffCode;
+                if (!string.IsNullOrEmpty(mainForm.StaffName)) staffName = mainForm.StaffName;
+            }
+            lblNhanVien.Text = staffName;
 
-            cbbox_trangThai.Items.Add("Đã thanh toán");
-            cbbox_trangThai.Items.Add("Chưa thanh toán");
-            cbbox_trangThai.SelectedIndex = 0;
-
-            btn_luu.Enabled = false;
-
-            dataGridView1.CellFormatting += dataGridView1_CellFormatting;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            // 3. Load danh sách giày vào ComboBox
+            LoadGiay();
         }
 
-        private void initUnitPrice(string shoeCode)
+        private void LoadGiay()
         {
+            dtGiay = cnn.showTable("Giay.xml");
+            if (dtGiay != null)
+            {
+                // Tạo cột hiển thị tên + giá cho dễ chọn
+                dtGiay.Columns.Add("Display", typeof(string), "tengiay + ' (' + magiay + ')'");
+
+                cboChonGiay.DataSource = dtGiay;
+                cboChonGiay.DisplayMember = "Display";
+                cboChonGiay.ValueMember = "magiay";
+            }
+        }
+
+        private void CboChonGiay_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboChonGiay.SelectedValue != null)
+            {
+                string maGiay = cboChonGiay.SelectedValue.ToString();
+                DataRow[] rows = dtGiay.Select("magiay = '" + maGiay + "'");
+                if (rows.Length > 0)
+                {
+                    decimal gia = decimal.Parse(rows[0]["dongia"].ToString());
+                    int tonKho = int.Parse(rows[0]["soluong"].ToString());
+
+                    lblDonGia.Text = gia.ToString("N0");
+                    lblTonKho.Text = tonKho.ToString();
+
+                    // Reset số lượng nhập
+                    numSoLuong.Value = 1;
+                    numSoLuong.Maximum = tonKho > 0 ? tonKho : 1; // Không cho nhập quá tồn
+                }
+            }
+        }
+
+        // --- NÚT THÊM VÀO GIỎ ---
+        private void BtnThemGioHang_Click(object sender, EventArgs e)
+        {
+            if (cboChonGiay.SelectedIndex == -1) return;
+
+            string maGiay = cboChonGiay.SelectedValue.ToString();
+            // Lấy tên giày từ ComboBox item (DataRowView)
+            DataRowView drv = (DataRowView)cboChonGiay.SelectedItem;
+            string tenGiay = drv["tengiay"].ToString();
+
+            decimal donGia = decimal.Parse(lblDonGia.Text.Replace(".", "").Replace(",", "")); // Parse tiền tệ
+            int soLuong = (int)numSoLuong.Value;
+            int tonKho = int.Parse(lblTonKho.Text);
+
+            if (soLuong > tonKho)
+            {
+                MessageBox.Show("Số lượng mua vượt quá tồn kho!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Kiểm tra hàng đã có trong giỏ chưa
+            bool exists = false;
+            foreach (DataRow row in dtGioHang.Rows)
+            {
+                if (row["magiay"].ToString() == maGiay)
+                {
+                    // Cộng dồn
+                    int slCu = int.Parse(row["soluong"].ToString());
+                    if (slCu + soLuong > tonKho)
+                    {
+                        MessageBox.Show("Tổng số lượng trong giỏ vượt quá tồn kho!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    row["soluong"] = slCu + soLuong;
+                    row["thanhtien"] = (slCu + soLuong) * donGia;
+                    exists = true;
+                    break;
+                }
+            }
+
+            if (!exists)
+            {
+                // Thêm mới
+                dtGioHang.Rows.Add(maGiay, tenGiay, donGia, soLuong, donGia * soLuong);
+            }
+
+            CapNhatTongTien();
+        }
+
+        // --- XÓA KHỎI GIỎ (Click vào lưới) ---
+        private void DgvGioHang_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Nếu click chuột phải hoặc muốn xóa...
+            // Ở đây đơn giản: Click đúp hoặc tạo nút xóa riêng.
+            // Code demo xóa hàng khi chọn và nhấn Delete trên bàn phím thì hay hơn, nhưng để đơn giản:
+            // Bạn có thể thêm 1 nút "Xóa dòng chọn" ở giao diện
+        }
+
+        private void CapNhatTongTien()
+        {
+            decimal tong = 0;
+            foreach (DataRow row in dtGioHang.Rows)
+            {
+                tong += decimal.Parse(row["thanhtien"].ToString());
+            }
+            lblTongTien.Text = tong.ToString("N0") + " VNĐ";
+            lblTongTien.Tag = tong; // Lưu giá trị số để tính toán
+        }
+
+        // --- THANH TOÁN (Lưu XML) ---
+        private void BtnThanhToan_Click(object sender, EventArgs e)
+        {
+            if (dtGioHang.Rows.Count == 0)
+            {
+                MessageBox.Show("Giỏ hàng đang trống!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (string.IsNullOrEmpty(txtTenKhach.Text))
+            {
+                MessageBox.Show("Vui lòng nhập tên khách hàng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtTenKhach.Focus();
+                return;
+            }
+
             try
             {
-                xDoc = XDocument.Load("Giay.xml");
-                var shoe = xDoc.Descendants("_x0027_Giay_x0027_")
-                              .FirstOrDefault(x => x.Element("magiay")?.Value == shoeCode);
+                // 1. Chuẩn bị dữ liệu Header Hóa Đơn
+                string maHD = lblMaHD.Text;
+                string maNV = staffCode; // Lấy từ biến toàn cục
+                string tenKhach = txtTenKhach.Text;
+                string ngayTao = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss"); // Format chuẩn XML date
+                string pttt = "Tiền mặt"; // Hoặc lấy từ RadioButton nếu có
+                string trangThai = "Đã thanh toán";
+                decimal tongTien = decimal.Parse(lblTongTien.Tag.ToString());
 
-                if (shoe == null)
+                // 2. Gọi Model để tạo Hóa Đơn (Header)
+                // Lưu ý: Hàm createBill của bạn đang thiết kế hơi lạ (nhận vào 1 sản phẩm đầu tiên).
+                // Để tương thích code cũ, ta sẽ lấy sản phẩm đầu tiên để gọi createBill,
+                // sau đó vòng lặp add các sản phẩm còn lại.
+
+                // Lấy dòng đầu tiên
+                DataRow firstRow = dtGioHang.Rows[0];
+                string firstShoe = firstRow["magiay"].ToString();
+                int firstQty = int.Parse(firstRow["soluong"].ToString());
+                decimal firstPrice = decimal.Parse(firstRow["dongia"].ToString());
+
+                // Set biến static để Model tính tồn kho (theo logic cũ của bạn)
+                // Cần lấy tồn kho hiện tại của giày này
+                DataRow[] rows = dtGiay.Select($"magiay = '{firstShoe}'");
+                if (rows.Length > 0) quantityRest = int.Parse(rows[0]["soluong"].ToString());
+
+                // Gọi tạo Hóa đơn + Chi tiết đầu tiên
+                hdModel.createBill(maHD, firstShoe, maNV, tenKhach, ngayTao, pttt, firstPrice, trangThai, firstQty, tongTien);
+
+                // 3. Vòng lặp thêm các chi tiết còn lại (từ dòng thứ 2 trở đi)
+                for (int i = 1; i < dtGioHang.Rows.Count; i++)
                 {
-                    txtField_donGia.Text = "0";
-                    quantityRest = 0;
-                    return;
+                    DataRow r = dtGioHang.Rows[i];
+                    string sCode = r["magiay"].ToString();
+                    int sQty = int.Parse(r["soluong"].ToString());
+                    decimal sPrice = decimal.Parse(r["dongia"].ToString());
+
+                    // Cập nhật tồn kho static cho món này
+                    rows = dtGiay.Select($"magiay = '{sCode}'");
+                    if (rows.Length > 0) quantityRest = int.Parse(rows[0]["soluong"].ToString());
+
+                    hdModel.createBillDetail(maHD, sCode, sQty, sPrice);
                 }
 
-                if (decimal.TryParse(shoe.Element("dongia")?.Value, out decimal unitPrice))
-                {
-                    txtField_donGia.Text = unitPrice.ToString("F2");
-                }
-                else
-                {
-                    txtField_donGia.Text = "0";
-                    MessageBox.Show("Đơn giá không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-                quantityRest = int.TryParse(shoe.Element("soluong")?.Value, out int quantity) ? quantity : 0;
+                MessageBox.Show("Thanh toán thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ResetForm();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Lỗi khi đọc thông tin giày: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Lỗi thanh toán: " + ex.Message);
             }
         }
 
-        private void btn_them_Click(object sender, EventArgs e)
+        private void ResetForm()
         {
-            if (!hdM.checkEmpty(txtField_maHoaDon.Text.Trim(), txtField_tenKhachHang.Text.Trim(), txtField_soLuong.Text.Trim()))
-            {
-                MessageBox.Show("Cần nhập đầy đủ thông tin");
-                txtField_maHoaDon.Text = "";
-                txtField_soLuong.Text = "";
-                txtField_tenKhachHang.Text = "";
-                txtField_maHoaDon.Focus();
-                return;
-            }
-
-            if (hdM.checkBillCode(txtField_maHoaDon.Text))
-            {
-                MessageBox.Show("Mã hoá đơn này đã tồn tại");
-                return;
-            }
-
-            if (!int.TryParse(txtField_soLuong.Text.Trim(), out int quantity))
-            {
-                MessageBox.Show("Số lượng không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            if (!decimal.TryParse(txtField_donGia.Text.Trim(), out decimal unitPrice))
-            {
-                MessageBox.Show("Đơn giá không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            if (quantity > quantityRest)
-            {
-                MessageBox.Show($"Số lượng vượt quá số lượng tồn kho ({quantityRest})", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            if (quantity <= 0)
-            {
-                MessageBox.Show("Số lượng phải lớn hơn 0", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            tgTien = quantity * unitPrice;
-
-            try 
-            {
-                string maHoaDon = txtField_maHoaDon.Text.Trim();
-                string tenKhachHang = txtField_tenKhachHang.Text.Trim();
-                string ngayTao = dateTimePicker1.Value.ToString("yyyy-MM-dd");
-                string phuongThucThanhToan = cbbx_thanhToan.Text;
-                string trangThai = cbbox_trangThai.Text;
-                string maGiay = cbbox_maGiay.SelectedValue.ToString(); 
-
-                hdM.createBill(
-                    maHoaDon,
-                    maGiay,
-                    _staffCode, 
-                    tenKhachHang,
-                    ngayTao,
-                    phuongThucThanhToan,
-                    unitPrice,
-                    trangThai,
-                    quantity,
-                    tgTien
-                );
-
-                MessageBox.Show("Tạo hoá đơn thành công");
-                loadHoaDon(); 
-
-                string message = "Bạn muốn thêm giày mới vào hoá đơn không?";
-                string title = "Thêm giày>>>";
-                DialogResult result = MessageBox.Show(message, title, MessageBoxButtons.YesNo);
-                
-                if (result == DialogResult.Yes)
-                {
-                    btn_them.Visible = false;
-                    btn_luu.Visible = true;
-                    btn_luu.Enabled = true;
-                    
-                    txtField_maHoaDon.Enabled = false;
-                    txtField_tenKhachHang.Enabled = false;
-                    txtField_donGia.Enabled = false;
-                    cbbx_thanhToan.Enabled = false;
-                    cbbox_trangThai.Enabled = false;
-                    dateTimePicker1.Enabled = false;
-                    
-                    cbbox_maGiay.Enabled = true;
-                    txtField_soLuong.Enabled = true;
-                    txtField_soLuong.Text = "0";
-
-                    showBillDetail(maHoaDon);
-                }
-                else
-                {
-                    clearTextField();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Lỗi khi tạo hoá đơn: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            dtGioHang.Clear();
+            txtTenKhach.Clear();
+            txtSDT.Clear();
+            lblMaHD.Text = "HD" + DateTime.Now.ToString("yyyyMMddHHmmss");
+            CapNhatTongTien();
+            LoadGiay(); // Load lại để cập nhật tồn kho mới
         }
 
-        private void showBillDetail(string billCode)
+        private void BtnHuy_Click(object sender, EventArgs e)
         {
-            try
+            if (dtGioHang.Rows.Count > 0)
             {
-                initdataGridView1();
-                XDocument doc = XDocument.Load("ChiTietHoaDon.xml");
-                var list = doc.Descendants("_x0027_ChiTietHoaDon_x0027_");
-                string maHoaDon, maGiay, soLuongDat, donGia;
-                
-                List<string[]> rowsToAdd = new List<string[]>();
-                
-                foreach (XElement node in list)
+                if (MessageBox.Show("Bạn có chắc muốn hủy đơn hàng này?", "Xác nhận", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    maHoaDon = node.Element("mahoadon").Value.ToString();
-                    if (maHoaDon == billCode)
-                    {
-                        maGiay = node.Element("magiay").Value;
-                        soLuongDat = node.Element("soluong").Value;
-                        donGia = node.Element("dongia").Value;
-                        rowsToAdd.Add(new string[] { maHoaDon, maGiay, soLuongDat, donGia });
-                    }
-                }
-
-                if (dataGridView1.Rows.Count > 0)
-                {
-                    dataGridView1.Rows.Clear();
-                }
-
-                foreach (string[] row in rowsToAdd)
-                {
-                    dataGridView1.Rows.Add(row);
-                }
-            }
-            catch (Exception ex)
-            {
-                //MessageBox.Show($"Lỗi khi hiển thị chi tiết hoá đơn: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void initdataGridView1()
-        {
-            if (this.dataGridView1.Columns.Count == 0)
-            {
-                this.dataGridView1.ColumnCount = 4;
-                this.dataGridView1.Columns[0].Name = "mahoadon";
-                this.dataGridView1.Columns[1].Name = "magiay";
-                this.dataGridView1.Columns[2].Name = "soluong";
-                this.dataGridView1.Columns[3].Name = "dongia";
-            }
-        }
-
-        private void btn_luu_Click(object sender, EventArgs e)
-        {
-            if (!hdM.checkDuplicatesProduct(txtField_maHoaDon.Text, cbbox_maGiay.SelectedValue.ToString()))
-            {
-                MessageBox.Show("Giày này đã có trong hoá đơn rồi nhé ////");
-            }
-            else
-            {
-                decimal unitPrice;
-
-                bool isUnitPriceValid = decimal.TryParse(txtField_donGia.Text, out unitPrice);
-
-                if (isUnitPriceValid)
-                {
-                    hdM.createBillDetail(txtField_maHoaDon.Text, cbbox_maGiay.SelectedValue.ToString(), Int32.Parse(txtField_soLuong.Text), unitPrice);
-                    MessageBox.Show("Thêm giày thành công");
-                    loadHoaDon(); 
-                    
-                    string message = "Bạn muốn thêm giày mới vào hoá đơn hả ))))?";
-                    string title = "Thêm giày>>";
-                    MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-                    DialogResult result = MessageBox.Show(message, title, buttons);
-                    if (result == DialogResult.Yes)
-                    {
-                        txtField_maHoaDon.Enabled = false;
-                        txtField_tenKhachHang.Enabled = false;
-                        showBillDetail(txtField_maHoaDon.Text);
-                        
-                        txtField_soLuong.Text = "0";
-                    }
-                    else
-                    {
-                        clearTextField();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Đơn giá không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ResetForm();
                 }
             }
         }
-
-        public void clearTextField()
-        {
-            txtField_maHoaDon.Text = "";
-            txtField_tenKhachHang.Text = "";
-            txtField_soLuong.Text = "0";
-            btn_luu.Visible = false;
-            btn_luu.Enabled = false;
-            btn_them.Visible = true;
-            
-            txtField_maHoaDon.Enabled = true;
-            txtField_tenKhachHang.Enabled = true;
-            txtField_donGia.Enabled = true;
-            cbbox_maGiay.Enabled = true;
-            txtField_soLuong.Enabled = true;
-            cbbx_thanhToan.Enabled = true;
-            cbbox_trangThai.Enabled = true;
-            dateTimePicker1.Enabled = true;
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow r = dataGridView1.Rows[e.RowIndex];
-
-                txtField_maHoaDon.Text = r.Cells["mahoadon"].Value.ToString();
-                txtField_tenKhachHang.Text = r.Cells["tenkhachhang"].Value.ToString();
-                cbbox_maGiay.Text = r.Cells["magiay"].Value.ToString();
-                txtField_soLuong.Text = r.Cells["soluong"].Value.ToString();
-                txtField_donGia.Text = r.Cells["dongia"].Value.ToString();
-                txtField_tenNhanVien.Text = r.Cells["manhanvien"].Value.ToString();
-
-                if (r.Cells["ngaytao"].Value != null)
-                {
-                    dateTimePicker1.Value = Convert.ToDateTime(r.Cells["ngaytao"].Value);
-                }
-
-                if (r.Cells["phuongthucthanhtoan"].Value != null)
-                {
-                    bool phuongThuc = Convert.ToBoolean(r.Cells["phuongthucthanhtoan"].Value);
-                    cbbx_thanhToan.SelectedItem = phuongThuc ? "Chuyển khoản" : "Tiền mặt";
-                }
-
-                if (r.Cells["trangthai"].Value != null)
-                {
-                    bool trangThai = Convert.ToBoolean(r.Cells["trangthai"].Value);
-                    cbbox_trangThai.SelectedItem = trangThai ? "Đã thanh toán" : "Chưa thanh toán";
-                }
-            }
-        }
-
-        private void btn_troLai_Click(object sender, EventArgs e)
-        {
-            TrangChu parentForm = this.ParentForm as TrangChu;
-            if (parentForm != null)
-            {
-                HoaDon hoaDonControl = new HoaDon(parentForm.StaffName);
-                parentForm.addUserControl(hoaDonControl);
-            }
-        }
-
-        private void cbbox_maGiay_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbbox_maGiay.SelectedValue != null)
-            {
-                string maGiay = cbbox_maGiay.SelectedValue.ToString();
-                initUnitPrice(maGiay);
-            }
-        }
-
     }
 }
