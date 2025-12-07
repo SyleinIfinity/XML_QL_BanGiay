@@ -26,11 +26,19 @@
     <mahieugiay>HG001</mahieugiay>
     <tengiay>Giày Nam ABC</tengiay>
     <size>42</size>
-    <mau>9</mau>
+    <mau>8</mau>
     <dongia>800000.00</dongia>
     <soluong>10</soluong>
   </_x0027_Giay_x0027_>
-  <_x0027_Giay_x0027_>_x0027_Giay_x0027_<magiay>G002</magiay><mahieugiay>HG002</mahieugiay><tengiay>Giày Nữ DEFabb</tengiay><size>38</size><mau>3</mau><dongia>600000.00</dongia><soluong>5</soluong></_x0027_Giay_x0027_>
+  <_x0027_Giay_x0027_>
+    <magiay>G002</magiay>
+    <mahieugiay>HG002</mahieugiay>
+    <tengiay>Giày Nữ DEFabb</tengiay>
+    <size>38</size>
+    <mau>4</mau>
+    <dongia>600000.00</dongia>
+    <soluong>5</soluong>
+  </_x0027_Giay_x0027_>
   <_x0027_Giay_x0027_>
     <magiay>G0022</magiay>
     <mahieugiay>HG002</mahieugiay>
@@ -38,6 +46,6 @@
     <size>38</size>
     <mau>3</mau>
     <dongia>600000.00</dongia>
-    <soluong>5</soluong>
+    <soluong>6</soluong>
   </_x0027_Giay_x0027_>
 </NewDataSet>

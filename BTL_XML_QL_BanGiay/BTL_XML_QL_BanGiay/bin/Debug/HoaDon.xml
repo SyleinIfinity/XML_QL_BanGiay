@@ -1,4 +1,4 @@
-<?xml version="1.0" standalone="yes"?>
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <NewDataSet>
   <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="_x0027_HoaDon_x0027_" msdata:UseCurrentLocale="true">
@@ -64,6 +64,15 @@
     <ngaytao>2024-11-16T12:00:00+07:00</ngaytao>
     <phuongthucthanhtoan>true</phuongthucthanhtoan>
     <tongtien>1200000.00</tongtien>
+    <trangthai>true</trangthai>
+  </_x0027_HoaDon_x0027_>
+  <_x0027_HoaDon_x0027_>
+    <mahoadon>HD20251207090841</mahoadon>
+    <manhanvien>NV001</manhanvien>
+    <tenkhachhang>Khánh</tenkhachhang>
+    <ngaytao>2025-12-07T09:09:12</ngaytao>
+    <phuongthucthanhtoan>false</phuongthucthanhtoan>
+    <tongtien>4400000.00</tongtien>
     <trangthai>true</trangthai>
   </_x0027_HoaDon_x0027_>
 </NewDataSet>
