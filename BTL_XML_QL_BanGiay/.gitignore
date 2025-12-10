@@ -36,3 +36,6 @@ _ReSharper.*/
 
 # File lock của project (nếu có)
 *.lock.json
+
+*.sqlite
+*.suo

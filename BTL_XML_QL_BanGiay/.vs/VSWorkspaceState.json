@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\BTL_XML_QL_BanGiay",
-    "\\packages",
-    "\\packages\\MaterialSkin.0.2.1"
+    "\\BTL_XML_QL_BanGiay\\Forms",
+    "\\BTL_XML_QL_BanGiay\\Models"
   ],
+  "SelectedNode": "\\BTL_XML_QL_BanGiay.sln",
   "PreviewInSolutionExplorer": false
 }

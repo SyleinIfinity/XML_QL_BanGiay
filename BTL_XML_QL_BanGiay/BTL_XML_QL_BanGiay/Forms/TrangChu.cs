@@ -193,7 +193,7 @@ namespace BTL_XML_QL_BanGiay.Forms
 
         private void btn_veChungToi_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Nhóm 15 \nĐoàn Cao Cường - 22115053122105\nTrần Huỳnh Vũ - 22115053122151\nLê Ngọc Hải - 22115053122112", "Về chúng tôi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Nhóm 1 \nLê Hoàng Quách Tỉnh - 23115053122145 \nPhan Văn Khánh - 23115053122114\nNguyễn Nữ Khánh Ngọc - 23115053122124", "Về chúng tôi", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btn_dangXuat_Click(object sender, EventArgs e)

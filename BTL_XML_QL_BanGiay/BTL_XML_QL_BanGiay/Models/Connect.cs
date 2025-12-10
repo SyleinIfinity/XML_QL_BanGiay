@@ -10,7 +10,6 @@ namespace BTL_XML_QL_BanGiay.Models
 {
     internal class Connect
     {
-        //string cnn = "Data Source=CGPC\\CAOCUONGSERVER;Initial Catalog=db_BTL_XML_QL_BanGiay;Integrated Security=True;Encrypt=True";
         string cnn = "Data Source=SYLEIN\\PHANVANKHANH;Initial Catalog=db_BTL_XML_QL_BanGiay;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
 
         public DataTable showTable(string filePath)
