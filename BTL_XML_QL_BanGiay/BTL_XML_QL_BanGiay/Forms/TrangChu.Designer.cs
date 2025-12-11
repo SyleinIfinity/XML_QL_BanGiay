@@ -30,14 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrangChu));
             this.panelSlideMenu = new System.Windows.Forms.Panel();
+            this.btn_dangXuat = new System.Windows.Forms.Button();
             this.panel_change = new System.Windows.Forms.Panel();
             this.btn_XML_SQL = new System.Windows.Forms.Button();
             this.btn_SQL_XML = new System.Windows.Forms.Button();
-            this.panel_managament = new System.Windows.Forms.Panel();
-            this.panel_main = new System.Windows.Forms.Panel();
-            this.btn_dangXuat = new System.Windows.Forms.Button();
             this.btn_chuyenDoi = new System.Windows.Forms.Button();
             this.btn_veChungToi = new System.Windows.Forms.Button();
+            this.panel_managament = new System.Windows.Forms.Panel();
             this.btn_bill = new System.Windows.Forms.Button();
             this.btn_shoe = new System.Windows.Forms.Button();
             this.btn_shoeBrand = new System.Windows.Forms.Button();
@@ -46,6 +45,7 @@
             this.btn_staff = new System.Windows.Forms.Button();
             this.btn_managament = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.panel_main = new System.Windows.Forms.Panel();
             this.panelSlideMenu.SuspendLayout();
             this.panel_change.SuspendLayout();
             this.panel_managament.SuspendLayout();
@@ -64,85 +64,10 @@
             this.panelSlideMenu.Controls.Add(this.panelLogo);
             this.panelSlideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSlideMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelSlideMenu.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panelSlideMenu.Margin = new System.Windows.Forms.Padding(6);
             this.panelSlideMenu.Name = "panelSlideMenu";
-            this.panelSlideMenu.Size = new System.Drawing.Size(195, 458);
+            this.panelSlideMenu.Size = new System.Drawing.Size(250, 600);
             this.panelSlideMenu.TabIndex = 0;
-            // 
-            // panel_change
-            // 
-            this.panel_change.Controls.Add(this.btn_XML_SQL);
-            this.panel_change.Controls.Add(this.btn_SQL_XML);
-            this.panel_change.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_change.Location = new System.Drawing.Point(0, 519);
-            this.panel_change.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel_change.Name = "panel_change";
-            this.panel_change.Size = new System.Drawing.Size(178, 84);
-            this.panel_change.TabIndex = 6;
-            // 
-            // btn_XML_SQL
-            // 
-            this.btn_XML_SQL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.btn_XML_SQL.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_XML_SQL.FlatAppearance.BorderSize = 0;
-            this.btn_XML_SQL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_XML_SQL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_XML_SQL.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_XML_SQL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_XML_SQL.Location = new System.Drawing.Point(0, 41);
-            this.btn_XML_SQL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_XML_SQL.Name = "btn_XML_SQL";
-            this.btn_XML_SQL.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btn_XML_SQL.Size = new System.Drawing.Size(178, 41);
-            this.btn_XML_SQL.TabIndex = 1;
-            this.btn_XML_SQL.Text = "XML sang SQL";
-            this.btn_XML_SQL.UseVisualStyleBackColor = false;
-            this.btn_XML_SQL.Click += new System.EventHandler(this.btn_XML_SQL_Click);
-            // 
-            // btn_SQL_XML
-            // 
-            this.btn_SQL_XML.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.btn_SQL_XML.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_SQL_XML.FlatAppearance.BorderSize = 0;
-            this.btn_SQL_XML.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_SQL_XML.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_SQL_XML.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_SQL_XML.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_SQL_XML.Location = new System.Drawing.Point(0, 0);
-            this.btn_SQL_XML.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_SQL_XML.Name = "btn_SQL_XML";
-            this.btn_SQL_XML.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btn_SQL_XML.Size = new System.Drawing.Size(178, 41);
-            this.btn_SQL_XML.TabIndex = 0;
-            this.btn_SQL_XML.Text = "SQL sang XML";
-            this.btn_SQL_XML.UseVisualStyleBackColor = false;
-            this.btn_SQL_XML.Click += new System.EventHandler(this.btn_SQL_XML_Click);
-            // 
-            // panel_managament
-            // 
-            this.panel_managament.Controls.Add(this.btn_bill);
-            this.panel_managament.Controls.Add(this.btn_shoe);
-            this.panel_managament.Controls.Add(this.btn_shoeBrand);
-            this.panel_managament.Controls.Add(this.btn_account);
-            this.panel_managament.Controls.Add(this.btn_category);
-            this.panel_managament.Controls.Add(this.btn_staff);
-            this.panel_managament.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_managament.Location = new System.Drawing.Point(0, 176);
-            this.panel_managament.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel_managament.Name = "panel_managament";
-            this.panel_managament.Size = new System.Drawing.Size(178, 245);
-            this.panel_managament.TabIndex = 3;
-            // 
-            // panel_main
-            // 
-            this.panel_main.AutoSize = true;
-            this.panel_main.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_main.Location = new System.Drawing.Point(195, 0);
-            this.panel_main.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel_main.Name = "panel_main";
-            this.panel_main.Size = new System.Drawing.Size(527, 458);
-            this.panel_main.TabIndex = 1;
-            this.panel_main.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_main_Paint);
             // 
             // btn_dangXuat
             // 
@@ -161,11 +86,60 @@
             this.btn_dangXuat.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btn_dangXuat.Name = "btn_dangXuat";
             this.btn_dangXuat.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.btn_dangXuat.Size = new System.Drawing.Size(178, 94);
+            this.btn_dangXuat.Size = new System.Drawing.Size(233, 94);
             this.btn_dangXuat.TabIndex = 7;
             this.btn_dangXuat.Text = "Đăng xuất";
             this.btn_dangXuat.UseVisualStyleBackColor = false;
             this.btn_dangXuat.Click += new System.EventHandler(this.btn_dangXuat_Click);
+            // 
+            // panel_change
+            // 
+            this.panel_change.Controls.Add(this.btn_XML_SQL);
+            this.panel_change.Controls.Add(this.btn_SQL_XML);
+            this.panel_change.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_change.Location = new System.Drawing.Point(0, 519);
+            this.panel_change.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel_change.Name = "panel_change";
+            this.panel_change.Size = new System.Drawing.Size(233, 84);
+            this.panel_change.TabIndex = 6;
+            // 
+            // btn_XML_SQL
+            // 
+            this.btn_XML_SQL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btn_XML_SQL.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_XML_SQL.FlatAppearance.BorderSize = 0;
+            this.btn_XML_SQL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_XML_SQL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_XML_SQL.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_XML_SQL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_XML_SQL.Location = new System.Drawing.Point(0, 41);
+            this.btn_XML_SQL.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_XML_SQL.Name = "btn_XML_SQL";
+            this.btn_XML_SQL.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btn_XML_SQL.Size = new System.Drawing.Size(233, 41);
+            this.btn_XML_SQL.TabIndex = 1;
+            this.btn_XML_SQL.Text = "XML sang SQL";
+            this.btn_XML_SQL.UseVisualStyleBackColor = false;
+            this.btn_XML_SQL.Click += new System.EventHandler(this.btn_XML_SQL_Click);
+            // 
+            // btn_SQL_XML
+            // 
+            this.btn_SQL_XML.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btn_SQL_XML.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_SQL_XML.FlatAppearance.BorderSize = 0;
+            this.btn_SQL_XML.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SQL_XML.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_SQL_XML.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_SQL_XML.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_SQL_XML.Location = new System.Drawing.Point(0, 0);
+            this.btn_SQL_XML.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_SQL_XML.Name = "btn_SQL_XML";
+            this.btn_SQL_XML.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btn_SQL_XML.Size = new System.Drawing.Size(233, 41);
+            this.btn_SQL_XML.TabIndex = 0;
+            this.btn_SQL_XML.Text = "SQL sang XML";
+            this.btn_SQL_XML.UseVisualStyleBackColor = false;
+            this.btn_SQL_XML.Click += new System.EventHandler(this.btn_SQL_XML_Click);
             // 
             // btn_chuyenDoi
             // 
@@ -184,7 +158,7 @@
             this.btn_chuyenDoi.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btn_chuyenDoi.Name = "btn_chuyenDoi";
             this.btn_chuyenDoi.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btn_chuyenDoi.Size = new System.Drawing.Size(178, 49);
+            this.btn_chuyenDoi.Size = new System.Drawing.Size(233, 49);
             this.btn_chuyenDoi.TabIndex = 5;
             this.btn_chuyenDoi.Text = "Chuyển đổi";
             this.btn_chuyenDoi.UseVisualStyleBackColor = false;
@@ -207,11 +181,26 @@
             this.btn_veChungToi.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btn_veChungToi.Name = "btn_veChungToi";
             this.btn_veChungToi.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btn_veChungToi.Size = new System.Drawing.Size(178, 49);
+            this.btn_veChungToi.Size = new System.Drawing.Size(233, 49);
             this.btn_veChungToi.TabIndex = 4;
             this.btn_veChungToi.Text = "Về chúng tôi";
             this.btn_veChungToi.UseVisualStyleBackColor = false;
             this.btn_veChungToi.Click += new System.EventHandler(this.btn_veChungToi_Click);
+            // 
+            // panel_managament
+            // 
+            this.panel_managament.Controls.Add(this.btn_bill);
+            this.panel_managament.Controls.Add(this.btn_shoe);
+            this.panel_managament.Controls.Add(this.btn_shoeBrand);
+            this.panel_managament.Controls.Add(this.btn_account);
+            this.panel_managament.Controls.Add(this.btn_category);
+            this.panel_managament.Controls.Add(this.btn_staff);
+            this.panel_managament.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_managament.Location = new System.Drawing.Point(0, 176);
+            this.panel_managament.Margin = new System.Windows.Forms.Padding(2);
+            this.panel_managament.Name = "panel_managament";
+            this.panel_managament.Size = new System.Drawing.Size(233, 245);
+            this.panel_managament.TabIndex = 3;
             // 
             // btn_bill
             // 
@@ -227,7 +216,7 @@
             this.btn_bill.Margin = new System.Windows.Forms.Padding(2);
             this.btn_bill.Name = "btn_bill";
             this.btn_bill.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btn_bill.Size = new System.Drawing.Size(178, 41);
+            this.btn_bill.Size = new System.Drawing.Size(233, 41);
             this.btn_bill.TabIndex = 5;
             this.btn_bill.Text = "Hoá đơn";
             this.btn_bill.UseVisualStyleBackColor = false;
@@ -247,7 +236,7 @@
             this.btn_shoe.Margin = new System.Windows.Forms.Padding(2);
             this.btn_shoe.Name = "btn_shoe";
             this.btn_shoe.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btn_shoe.Size = new System.Drawing.Size(178, 41);
+            this.btn_shoe.Size = new System.Drawing.Size(233, 41);
             this.btn_shoe.TabIndex = 4;
             this.btn_shoe.Text = "Giày";
             this.btn_shoe.UseVisualStyleBackColor = false;
@@ -267,7 +256,7 @@
             this.btn_shoeBrand.Margin = new System.Windows.Forms.Padding(2);
             this.btn_shoeBrand.Name = "btn_shoeBrand";
             this.btn_shoeBrand.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btn_shoeBrand.Size = new System.Drawing.Size(178, 41);
+            this.btn_shoeBrand.Size = new System.Drawing.Size(233, 41);
             this.btn_shoeBrand.TabIndex = 3;
             this.btn_shoeBrand.Text = "Hiệu giày";
             this.btn_shoeBrand.UseVisualStyleBackColor = false;
@@ -287,7 +276,7 @@
             this.btn_account.Margin = new System.Windows.Forms.Padding(2);
             this.btn_account.Name = "btn_account";
             this.btn_account.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btn_account.Size = new System.Drawing.Size(178, 41);
+            this.btn_account.Size = new System.Drawing.Size(233, 41);
             this.btn_account.TabIndex = 2;
             this.btn_account.Text = "Tài khoản";
             this.btn_account.UseVisualStyleBackColor = false;
@@ -307,7 +296,7 @@
             this.btn_category.Margin = new System.Windows.Forms.Padding(2);
             this.btn_category.Name = "btn_category";
             this.btn_category.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btn_category.Size = new System.Drawing.Size(178, 41);
+            this.btn_category.Size = new System.Drawing.Size(233, 41);
             this.btn_category.TabIndex = 1;
             this.btn_category.Text = "Danh mục";
             this.btn_category.UseVisualStyleBackColor = false;
@@ -327,7 +316,7 @@
             this.btn_staff.Margin = new System.Windows.Forms.Padding(2);
             this.btn_staff.Name = "btn_staff";
             this.btn_staff.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btn_staff.Size = new System.Drawing.Size(178, 41);
+            this.btn_staff.Size = new System.Drawing.Size(233, 41);
             this.btn_staff.TabIndex = 0;
             this.btn_staff.Text = "Nhân viên";
             this.btn_staff.UseVisualStyleBackColor = false;
@@ -350,7 +339,7 @@
             this.btn_managament.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btn_managament.Name = "btn_managament";
             this.btn_managament.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btn_managament.Size = new System.Drawing.Size(178, 49);
+            this.btn_managament.Size = new System.Drawing.Size(233, 49);
             this.btn_managament.TabIndex = 2;
             this.btn_managament.Text = "Quản lý";
             this.btn_managament.UseVisualStyleBackColor = false;
@@ -363,22 +352,43 @@
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(178, 127);
+            this.panelLogo.Size = new System.Drawing.Size(233, 127);
             this.panelLogo.TabIndex = 1;
+            // 
+            // panel_main
+            // 
+            this.panel_main.AutoSize = true;
+            this.panel_main.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_main.Location = new System.Drawing.Point(250, 0);
+            this.panel_main.Margin = new System.Windows.Forms.Padding(2);
+            this.panel_main.Name = "panel_main";
+            this.panel_main.Size = new System.Drawing.Size(600, 600); // Dòng này chỉ có ý nghĩa nếu Form đủ rộng
+            this.panel_main.TabIndex = 1;
+            this.panel_main.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_main_Paint);
+
             // 
             // TrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(722, 458);
+
+            // --- QUAN TRỌNG: SỬA LẠI KÍCH THƯỚC FORM TẠI ĐÂY ---
+            // Đảm bảo chiều rộng ít nhất là 850 (250 menu + 600 main)
+            this.ClientSize = new System.Drawing.Size(850, 600);
+
+            // Thiết lập kích thước tối thiểu để người dùng không thể kéo nhỏ hơn mức cho phép
+            // 866 = 850 + viền cửa sổ (khoảng 16px)
+            // 639 = 600 + thanh tiêu đề (khoảng 39px)
+            this.MinimumSize = new System.Drawing.Size(866, 639);
+
             this.Controls.Add(this.panel_main);
             this.Controls.Add(this.panelSlideMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.MinimumSize = new System.Drawing.Size(727, 461);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "TrangChu";
-            this.Text = "TrangChu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen; // Thêm dòng này để Form hiện giữa màn hình cho đẹp
+            this.Text = "Trang chủ - Quản lý bán giày";
             this.panelSlideMenu.ResumeLayout(false);
             this.panel_change.ResumeLayout(false);
             this.panel_managament.ResumeLayout(false);

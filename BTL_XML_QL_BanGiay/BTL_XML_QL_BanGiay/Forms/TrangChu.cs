@@ -193,7 +193,89 @@ namespace BTL_XML_QL_BanGiay.Forms
 
         private void btn_veChungToi_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Nhóm 1 \nLê Hoàng Quách Tỉnh - 23115053122145 \nPhan Văn Khánh - 23115053122114\nNguyễn Nữ Khánh Ngọc - 23115053122124", "Về chúng tôi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // 1. Kiểm tra xem khung giới thiệu đã mở chưa (để tránh mở nhiều lần)
+            Control existingPanel = this.Controls["pnlGioiThieu_Overlay"];
+            if (existingPanel != null)
+            {
+                existingPanel.BringToFront();
+                return;
+            }
+
+            // 2. Tạo Panel nền (Overlay) để làm tối giao diện phía sau (giả lập Dialog)
+            Panel pnlOverlay = new Panel();
+            pnlOverlay.Name = "pnlGioiThieu_Overlay";
+            pnlOverlay.Size = new Size(500, 320);
+            // Căn giữa màn hình
+            pnlOverlay.Location = new Point((this.ClientSize.Width - pnlOverlay.Width) / 2, (this.ClientSize.Height - pnlOverlay.Height) / 2);
+            pnlOverlay.BackColor = Color.White;
+            // Tạo viền và bóng đổ đơn giản bằng cách lồng panel (nếu muốn cầu kỳ hơn), 
+            // ở đây dùng BorderStyle đơn giản cho gọn code.
+            pnlOverlay.BorderStyle = BorderStyle.FixedSingle;
+            pnlOverlay.Anchor = AnchorStyles.None; // Giữ vị trí khi phóng to thu nhỏ
+
+            // 3. Tạo Header (Tiêu đề xanh)
+            Panel pnlHeader = new Panel();
+            pnlHeader.Dock = DockStyle.Top;
+            pnlHeader.Height = 50;
+            pnlHeader.BackColor = Color.MidnightBlue;
+
+            Label lblTitle = new Label();
+            lblTitle.Text = "VỀ CHÚNG TÔI";
+            lblTitle.ForeColor = Color.White;
+            lblTitle.Font = new Font("Segoe UI", 14, FontStyle.Bold);
+            lblTitle.AutoSize = false;
+            lblTitle.TextAlign = ContentAlignment.MiddleLeft;
+            lblTitle.Dock = DockStyle.Fill;
+            lblTitle.Padding = new Padding(20, 0, 0, 0);
+
+            // Nút đóng (X)
+            Button btnClose = new Button();
+            btnClose.Text = "X";
+            btnClose.Dock = DockStyle.Right;
+            btnClose.Width = 50;
+            btnClose.FlatStyle = FlatStyle.Flat;
+            btnClose.FlatAppearance.BorderSize = 0;
+            btnClose.FlatAppearance.MouseOverBackColor = Color.Red;
+            btnClose.ForeColor = Color.White;
+            btnClose.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+            btnClose.Click += (s, args) => { this.Controls.Remove(pnlOverlay); pnlOverlay.Dispose(); };
+
+            pnlHeader.Controls.Add(lblTitle);
+            pnlHeader.Controls.Add(btnClose);
+
+            // 4. Nội dung (Thông tin nhóm)
+            Label lblContent = new Label();
+            lblContent.Dock = DockStyle.Fill;
+            // Sử dụng HTML-like formatting hoặc xuống dòng thủ công
+            lblContent.Text = "NHÓM 1\n\n" +
+                              "Lê Hoàng Quách Tỉnh - 23115053122145\n" +
+                              "Phan Văn Khánh - 23115053122114\n" +
+                              "Nguyễn Nữ Khánh Ngọc - 23115053122124";
+            lblContent.Font = new Font("Segoe UI", 12, FontStyle.Regular);
+            lblContent.TextAlign = ContentAlignment.MiddleCenter;
+            lblContent.ForeColor = Color.DimGray;
+
+            // 5. Nút OK ở dưới cùng
+            Button btnOK = new Button();
+            btnOK.Text = "Đóng";
+            btnOK.Size = new Size(100, 40);
+            // Căn giữa nút OK
+            btnOK.Location = new Point((pnlOverlay.Width - btnOK.Width) / 2, pnlOverlay.Height - 60);
+            btnOK.BackColor = Color.ForestGreen;
+            btnOK.ForeColor = Color.White;
+            btnOK.FlatStyle = FlatStyle.Flat;
+            btnOK.FlatAppearance.BorderSize = 0;
+            btnOK.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            btnOK.Click += (s, args) => { this.Controls.Remove(pnlOverlay); pnlOverlay.Dispose(); };
+
+            // 6. Thêm các control vào panel nền
+            pnlOverlay.Controls.Add(btnOK);
+            pnlOverlay.Controls.Add(lblContent); // Add Content sau để nó nằm dưới Header
+            pnlOverlay.Controls.Add(pnlHeader);
+
+            // 7. Thêm Panel vào Form chính và đưa lên trên cùng
+            this.Controls.Add(pnlOverlay);
+            pnlOverlay.BringToFront();
         }
 
         private void btn_dangXuat_Click(object sender, EventArgs e)

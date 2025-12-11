@@ -20,8 +20,11 @@ namespace BTL_XML_QL_BanGiay.UserControls
         {
             InitializeComponent();
             loadDanhMuc();
+            // Đăng ký sự kiện
             dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
             txtField_timKiem.TextChanged += txtField_timKiem_TextChanged;
+
+            // Gọi hàm làm đẹp giao diện
             LamDepGiaoDien();
         }
 
@@ -33,7 +36,8 @@ namespace BTL_XML_QL_BanGiay.UserControls
 
                 if (dt == null || dt.Rows.Count == 0)
                 {
-                    MessageBox.Show("Chưa có dữ liệu danh mục. Vui lòng thêm dữ liệu.");
+                    // Không cần hiện thông báo mỗi lần load nếu chưa có dữ liệu, tránh phiền
+                    dataGridView1.DataSource = null;
                     return;
                 }
 
@@ -81,7 +85,7 @@ namespace BTL_XML_QL_BanGiay.UserControls
                 DataView dv = dt.DefaultView;
                 if (!string.IsNullOrEmpty(searchValue))
                 {
-                    dv.RowFilter = $"madanhmuc LIKE '%{searchValue}%'";
+                    dv.RowFilter = $"madanhmuc LIKE '%{searchValue}%' OR tendanhmuc LIKE '%{searchValue}%'";
                 }
                 else
                 {
@@ -142,13 +146,16 @@ namespace BTL_XML_QL_BanGiay.UserControls
 
             if (!dmM.checkCategoryCode(categoryCode))
             {
-                MessageBox.Show("Không tìm thấy tài khoản để xóa.");
+                MessageBox.Show("Không tìm thấy danh mục để xóa.");
                 return;
             }
 
-            dmM.deleteCategory(categoryCode);
-            MessageBox.Show("Xóa danh mục thành công!");
-            loadDanhMuc();
+            if (MessageBox.Show("Bạn có chắc chắn muốn xóa danh mục này?", "Xác nhận", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                dmM.deleteCategory(categoryCode);
+                MessageBox.Show("Xóa danh mục thành công!");
+                loadDanhMuc();
+            }
         }
 
         private void LamDepGiaoDien()
@@ -157,33 +164,33 @@ namespace BTL_XML_QL_BanGiay.UserControls
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 122, 204); // Màu xanh dương khi chọn
+            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 122, 204);
             dataGridView1.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
             dataGridView1.BackgroundColor = Color.White;
 
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72); // Màu tiêu đề xanh đậm
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
             dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dataGridView1.ColumnHeadersHeight = 40;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; // Tự động giãn cột
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            // 2. Làm đẹp các nút bấm (Button)
-            SetupButton(btn_them, "", Color.MediumSeaGreen);
-            SetupButton(btn_sua, "", Color.Orange);
-            SetupButton(btn_xoa, "", Color.Crimson);
+            // 2. Làm đẹp các nút bấm (Button) - ĐÃ SỬA LẠI TEXT Ở ĐÂY
+            SetupButton(btn_them, "Thêm", Color.MediumSeaGreen);
+            SetupButton(btn_sua, "Sửa", Color.Orange);
+            SetupButton(btn_xoa, "Xóa", Color.Crimson);
         }
 
         private void SetupButton(Button btn, string text, Color backColor)
         {
-            btn.Text = text; // Gán lại chữ cho chắc chắn
+            btn.Text = text; // Dòng này sẽ gán chữ vào nút
             btn.FlatStyle = FlatStyle.Flat;
             btn.FlatAppearance.BorderSize = 0;
             btn.BackColor = backColor;
             btn.ForeColor = Color.White;
             btn.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-            btn.Cursor = Cursors.Hand; // Đổi con trỏ chuột thành hình bàn tay
-            btn.Size = new Size(100, 40); // Chỉnh kích thước nút to ra chút cho đẹp
+            btn.Cursor = Cursors.Hand;
+            btn.Size = new Size(100, 40);
         }
     }
 }

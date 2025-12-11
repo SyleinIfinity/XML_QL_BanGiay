@@ -24,7 +24,7 @@ namespace BTL_XML_QL_BanGiay.Forms
 
         private void btn_close_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Environment.Exit(0);
         }
 
         private void btn_DangNhap_Click(object sender, EventArgs e)
